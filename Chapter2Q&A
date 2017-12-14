@@ -1,0 +1,3 @@
+# Q. Why bother with data abstraction?
+A. It helps us produce reliable and correct code. For example, in the 2000 presidential election, Al Gore received -16,022 votes on an
+electronic voting machine in Volusia County, Florida -- the tally was clearly not properly encapsulated in the voting machine software!
