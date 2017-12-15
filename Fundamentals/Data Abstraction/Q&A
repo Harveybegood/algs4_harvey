@@ -1,0 +1,8 @@
+##Q. Why bother with data abstraction?
+###A. It helps us produce reliable and correct code. For example, in the 2000 presidential election, Al Gore received -16,022 votes on
+###an electronic voting machine in Volusia County, Florida-the tally was not clearly properly encapsulated in the voting machine software!
+
+##Q. Why the distinction between primitive and reference types? Why not just have reference types?
+###A. Performance. Java provides the reference types Integer, Double, and so forth that correspond to primitive types that can be used
+###by programmers who prefer to ignore the distinciton. Primitive types are closer to the types of data that are supported by computer
+###hardware, so programs that use them usually run faster than programs that use corresponding reference types.
