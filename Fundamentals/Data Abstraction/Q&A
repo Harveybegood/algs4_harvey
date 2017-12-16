@@ -107,3 +107,4 @@ A. A method that is no longer fully supported, but kept in an API to maintain co
    programs, so, instead, they added a new method, Character.isWhiteSpace(), and deprecated the old mothod. As time wears on, this
    practice certainly complicates APIs. Sometimes, entire classes are deprecated. For example, Java deprecated its Java.util.Date
    in order to better support internationalization.
+   
