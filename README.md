@@ -1,8 +1,7 @@
 # NewBeginner
 
-Hello, I am Lizhong Yu, also named as Harvey for easily read
-Miscell
-~~test test test, can you hear me~~
+Hello, I am Lizhong Yu, also with an English name as Harvey 
+
 ```javascript
 var s = "JavaScript syntax hightlighting";
 alert(s);
