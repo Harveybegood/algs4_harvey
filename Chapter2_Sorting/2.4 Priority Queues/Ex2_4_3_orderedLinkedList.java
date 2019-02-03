@@ -29,8 +29,7 @@ public class Ex2_4_3_orderedLinkedList<Item extends Comparable<Item>> {
         }
         else {
             Node sampleNode = first;
-            first = new Node();
-            first.item = item;
+      
             // Compare the new inserted node with one of each existing node
             while (sampleNode.next != null && item.compareTo(sampleNode.next.item) > 0){
                 sampleNode = sampleNode.next;
