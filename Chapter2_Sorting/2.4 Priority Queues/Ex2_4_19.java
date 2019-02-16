@@ -33,8 +33,8 @@ public class Ex2_4_19 {
                     break;
                 }
                 Key temp = pq[j];
-                pq[j] = pq[j+1];
-                pq[j+1] = temp;
+                pq[j] = pq[k];
+                pq[k] = temp;
                 k = j;
             }
         }
