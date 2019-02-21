@@ -10,6 +10,7 @@ import edu.princeton.cs.algs4.StdOut;
 * */
 public class Ex1_3_14 {
     public class ResizingArrayQueueOfStringWithFixedSizeArray{
+        private int i = 0;
         private int size;
         private String[] queue;
         public ResizingArrayQueueOfStringWithFixedSizeArray(int n){
@@ -30,12 +31,14 @@ public class Ex1_3_14 {
                 throw new RuntimeException("Queue is underflow. ");
             }
             size--;
-            String s = queue[size];
-            queue[size] = "";
+            String s = queue[i];
+            queue[i] = "";
+            i++;
             return s;
         }
     }
     public class ResizingArrayQueueOfString{
+        private int i = 0;
         private int size;
         private String[] queue;
         public ResizingArrayQueueOfString(){
@@ -65,8 +68,9 @@ public class Ex1_3_14 {
                 resize(queue.length / 2);
             }
             size--;
-            String s = queue[size];
-            queue[size] = "";
+            String s = queue[i];
+            queue[i] = "";
+            i++;
             return s;
         }
     }
@@ -81,8 +85,8 @@ public class Ex1_3_14 {
        fixedSizeArray.enqueue("c");
        fixedSizeArray.enqueue("d");
        fixedSizeArray.enqueue("e");
-       StdOut.println("Expected e: " + fixedSizeArray.dequeue() + " - Size remained: 4: " + fixedSizeArray.size0fQueue());
-       StdOut.println("Expected d: " + fixedSizeArray.dequeue() + " - Size remained: 3: " + fixedSizeArray.size0fQueue());
+       StdOut.println("Expected a: " + fixedSizeArray.dequeue() + " - Size remained: 4: " + fixedSizeArray.size0fQueue());
+       StdOut.println("Expected b: " + fixedSizeArray.dequeue() + " - Size remained: 3: " + fixedSizeArray.size0fQueue());
        StdOut.println("Expected c: " + fixedSizeArray.dequeue() + " - Size remained: 2: " + fixedSizeArray.size0fQueue());
 
        ResizingArrayQueueOfString nonFixedSizeArray = ex1_3_14.new ResizingArrayQueueOfString();
@@ -91,8 +95,8 @@ public class Ex1_3_14 {
        nonFixedSizeArray.enqueue("C");
        nonFixedSizeArray.enqueue("D");
        nonFixedSizeArray.enqueue("E");
-       StdOut.println("Expected E: " + nonFixedSizeArray.dequeue() + " - Size remained: 4: " + nonFixedSizeArray.sizeOfQueue());
-       StdOut.println("Expected D: " + nonFixedSizeArray.dequeue() + " - Size remained: 3: " + nonFixedSizeArray.sizeOfQueue());
+       StdOut.println("Expected A: " + nonFixedSizeArray.dequeue() + " - Size remained: 4: " + nonFixedSizeArray.sizeOfQueue());
+       StdOut.println("Expected B: " + nonFixedSizeArray.dequeue() + " - Size remained: 3: " + nonFixedSizeArray.sizeOfQueue());
        StdOut.println("Expected C: " + nonFixedSizeArray.dequeue() + " - Size remained: 2: " + nonFixedSizeArray.sizeOfQueue());
     }
 
