@@ -35,11 +35,13 @@ public class Ex2_4_25 {
             return sum + " = " + i + "^3" + " + " + j + "^3";
         }
         public void allDistinctIntegers(CubeSum sThis){
+            pairs = 0;
             for (int i = 0; i <= 10; i++){
                 for (int j = 0; j <= 10; j++){
                     CubeSum sThat = new CubeSum(i, j);
-                    if (compareTo(sThat) == 0){
-                        StdOut.println(" c= " + sThat.i + " d= " + sThat.j);
+                    if (sThis.compareTo(sThat) == 0){
+                        pairs++;
+                        StdOut.print(" c = " + sThat.i + " d = " + sThat.j);
                     }
                 }
             }
@@ -54,8 +56,9 @@ public class Ex2_4_25 {
             // find smallest sum, print it out, and update
             while (!pq.isEmpty()){
                 CubeSum s = pq.delMin();
-                StdOut.print(s + " a= " + s.i + " b= " + s.j);
+                StdOut.print(s + " | a = " + s.i + " b = " + s.j);
                 s.allDistinctIntegers(s);
+                StdOut.println("\nThe numbers of distinct integers: " + s.pairs);
                 if (s.j < n){
                     pq.insert(new CubeSum(s.i, s.j + 1));
                 }
