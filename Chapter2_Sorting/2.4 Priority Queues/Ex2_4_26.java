@@ -3,7 +3,6 @@ package Chapter2_4_PriorityQueues;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
-import javafx.scene.paint.Stop;
 
 /*
 *   Heap without exchanges. Because the exch() primitive is used in the sink() and swim() operations, the items are
@@ -88,7 +87,7 @@ public class Ex2_4_26 {
             if (isEmpty()){throw new RuntimeException("Queue is underflow. ");}
             Key max = pq[1];
             sink(1);
-            pq[n+1] = null;
+            pq[n] = null;
             n--;
             if (n == pq.length / 4){resize(pq.length / 2);}
             return max;
@@ -96,8 +95,8 @@ public class Ex2_4_26 {
         public boolean isEmpty(){return n == 0;}
         public int size(){return n;}
         public void resize(int newSize){
-            Key[] newArray = (Key[]) new Comparable[newSize];
-            for (int i = 0; i < n; i++){
+            Key[] newArray =(Key[]) new Comparable[newSize];
+            for (int i = 1; i < n + 1; i++){
                 newArray[i] = pq[i];
             }
             pq = newArray;
@@ -130,25 +129,27 @@ public class Ex2_4_26 {
     }
 
     public static void main(String[] args) {
-        int experiment = 10;
         heapWithoutExchange<Integer> withoutExchange = new Ex2_4_26().new heapWithoutExchange<>();
-        Stopwatch timer1 = new Stopwatch();
-        for (int i = 0; i < experiment; i++){
-            withoutExchange.insert(StdRandom.uniform(0, experiment));
-        }
-        for (int i = 0; i < experiment - 2; i++){
-            withoutExchange.delMax();
-        }
-        double timeForWithoutExchange = timer1.elapsedTime();
         heapWithExchange withExchange = new Ex2_4_26().new heapWithExchange();
-        Stopwatch timer2 = new Stopwatch();
-        for (int i = 0; i < experiment; i++){
-            withExchange.insert(StdRandom.uniform(0, experiment));
+        StdOut.printf("%14s %10s\n", "WithoutExchange", "withExchange");
+        for (int experiment = 100000; experiment < 1000000; experiment += 100000){
+            Stopwatch timer1 = new Stopwatch();
+            for (int i = 0; i < experiment; i++){
+                withoutExchange.insert(StdRandom.uniform(0, experiment));
+            }
+            for (int i = 0; i < experiment - 2; i++){
+                withoutExchange.delMax();
+            }
+            double timeForWithoutExchange = timer1.elapsedTime();
+            Stopwatch timer2 = new Stopwatch();
+            for (int i = 0; i < experiment; i++){
+                withExchange.insert(StdRandom.uniform(0, experiment));
+            }
+            for (int i = 0; i < experiment; i++){
+                withExchange.delMax();
+            }
+            double timeForWithExchange = timer2.elapsedTime();
+            StdOut.printf("%5.2f %5.2f\n", timeForWithoutExchange, timeForWithExchange);
         }
-        for (int i = 0; i < experiment; i++){
-            withExchange.delMax();
-        }
-        double timeForWithExchange = timer2.elapsedTime();
-        StdOut.printf("WithoutExchange: %2.2f \n WithExchange: %2.2f", timeForWithoutExchange, timeForWithExchange);
     }
 }
