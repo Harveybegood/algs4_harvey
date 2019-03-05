@@ -2,18 +2,25 @@ package Chapter2_4_PriorityQueues;
 
 import edu.princeton.cs.algs4.*;
 
-
 /*
 *   Selection filter. Write a TopM client that reads points(x,y,z) from standard input, takes a value M from the command
 *   line, and prints the M points that are closest to the origin in Euclidean distance. Estimate the running time of
 *   your client for N = 10^8 and M = 10^4.
 *
+*   Key points:
+*
+*   Write ADT for points construct.
+*
+*   generate initial point and the number N = 10^8 of points
+*
 *   https://en.wikipedia.org/wiki/Euclidean_distance
 *   In mathematics, the Euclidean distance or Euclidean metric is the ordinary straight-line distance between two points
-*   int Euclidean space. the TopW client that reads points(x,y,z) which applies to three dimensions space, then the
-*   distance is d(point, M)=((p1-m1)^2 + (p2-m2)^2 + (p3-m3)^2)^1/3
+*   in Euclidean space. the TopW client that reads points(x,y,z) which applies to three dimensions space, then the
+*   distance to present can be d(point, M)=((p1-m1)^2 + (p2-m2)^2 + (p3-m3)^2)^1/3
+*
 * */
 public class Ex2_4_28 {
+    // construct a ADT for points
     public class Point implements Comparable<Point>{
         // generate points(x,y,z)
         double x, y, z;
@@ -45,13 +52,14 @@ public class Ex2_4_28 {
             }
             return array;
         }
-
     }
 
     public static void main(String[] args) {
         int M = 10000;
-        MinPQ<Point> pq = new MinPQ<>(M + 1);
-
+        MaxPQ<Point> pq = new MaxPQ<>(M + 1);
+        Ex2_4_28 selectionFilter = new Ex2_4_28();
+        Point initialPoint = selectionFilter.new Point(.1, .2, .3);
+        initialPoint.generateRandomPointsArray((int) Math.pow(10, 6));
         while (StdIn.hasNextLine()){
             String lines = StdIn.readLine();
             String[] pointsString = lines.split(" ");
@@ -60,12 +68,12 @@ public class Ex2_4_28 {
             double z = Double.parseDouble(pointsString[2]);
             pq.insert(new Ex2_4_28().new Point(x, y, z));
             if (pq.size() > M){
-                pq.delMin();
+                pq.delMax();
             }
         }
         Stack<Point> stack = new Stack<>();
         while (!pq.isEmpty()){
-            stack.push(pq.delMin());
+            stack.push(pq.delMax());
         }
         for (Point t : stack){
             StdOut.println(t);
