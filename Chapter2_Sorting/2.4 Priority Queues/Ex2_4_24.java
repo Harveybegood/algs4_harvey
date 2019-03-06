@@ -153,3 +153,4 @@ public class Ex2_4_24<Key extends Comparable<Key>> {
         StdOut.println("Size: " + pqExplicitLinks.size() + " Expected: 1. ");
     }
 }
+// there exists bug
