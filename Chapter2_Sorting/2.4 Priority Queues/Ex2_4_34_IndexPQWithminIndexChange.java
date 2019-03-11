@@ -10,7 +10,7 @@ import edu.princeton.cs.algs4.StdOut;
 @SuppressWarnings("unchecked")
 public class Ex2_4_34_IndexPQWithminIndexChange<Key extends Comparable<Key>> {
     private int n;
-    private int[] pq;   // chanage pq[] to hold indices
+    private int[] pq;   // change pq[] to hold indices
     private Key[] keys; // hold the key values and key values with priorities
     private int[] qp;   // hold the inverse of pq[], qp[pq[i]] = pq[qp[i]] = i, qp[i] = -1 if i is not on the queue.
 
@@ -28,11 +28,11 @@ public class Ex2_4_34_IndexPQWithminIndexChange<Key extends Comparable<Key>> {
     public int size(){return n;}
     private void exchange(int v, int w){
         Key temp = keys[pq[v]];
-        int tempIndex = pq[v];
+        //int tempIndex = pq[v];
         keys[pq[v]] = keys[pq[w]];
-        pq[v] = pq[w];
+        //pq[v] = pq[w];
         keys[pq[w]] = temp;
-        pq[w] = tempIndex;
+        //pq[w] = tempIndex;
     }
     private boolean less(int i, int j){
         return keys[pq[i]].compareTo(keys[pq[j]]) < 0;
