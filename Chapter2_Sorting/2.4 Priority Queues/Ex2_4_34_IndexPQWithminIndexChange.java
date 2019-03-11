@@ -71,17 +71,17 @@ public class Ex2_4_34_IndexPQWithminIndexChange<Key extends Comparable<Key>> {
         keys[pq[n+1]] = null;
         qp[pq[n+1]] = -1;
     }
-    public int delMin(){
+    public Key delMin(){
         // This is minimum-oriented PQ, according to which we delete the top element of heap to complete the delete action
         if (keys.length == 0){throw new RuntimeException("PQ is underflow. ");}
         if (n > 0 && n == keys.length / 4){resize(keys.length / 2);}
-        int indexOfMin = pq[1];
+        Key valueOfMin = keys[pq[1]];
         exchange(1, n);
         n--;
         keys[pq[n+1]] = null;
         qp[pq[n+1]] = -1;
         sink(1);
-        return indexOfMin;
+        return valueOfMin;
     }
     public void sink(int k){
         while (2 * pq[k] <= n){
