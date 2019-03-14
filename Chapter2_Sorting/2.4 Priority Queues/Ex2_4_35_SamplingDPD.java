@@ -37,7 +37,7 @@ public class Ex2_4_35_SamplingDPD {
         }
     }
 
-    // operation random(), return an index i with its probability p[i] / T
+    // operation random(), return an index i with its probability p[i] / T, what is the "index i  with probability p[i]/T"?
 
     // operation change(i, v), change all of the weight of the nodes
     private void change(int i, double v){}
