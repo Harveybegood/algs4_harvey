@@ -24,13 +24,13 @@ public class Ex2_4_35_SamplingDPD {
     private double[] WeightSum;
     private double T;
     public Ex2_4_35_SamplingDPD(double[] p){
-        // copy the weight from argument p[] to pq[]
+        // copy the weight from argument p[] to pq[], which means each node has assigned with a weight.
         pq = new double[p.length + 1];
         for (int i = 1; i < p.length; i++){
             pq[i] = p[i - 1];
             T += p[i - 1];
         }
-        // store cumulative weight for each node
+        // store cumulative weight for each node that contains all weight of its subtree
         WeightSum = new double[p.length + 1];
         for (int i = p.length; i / 2 > 0; i--){
             WeightSum[i / 2] += p[i];
@@ -38,7 +38,6 @@ public class Ex2_4_35_SamplingDPD {
     }
 
     // operation random(), return an index i with its probability p[i] / T
-    private int random(){}
 
     // operation change(i, v), change all of the weight of the nodes
     private void change(int i, double v){}
