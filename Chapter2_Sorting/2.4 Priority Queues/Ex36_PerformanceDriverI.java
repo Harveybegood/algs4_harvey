@@ -47,7 +47,7 @@ public class Ex36_PerformanceDriverI<Key extends Comparable<Key>> {
         return max;
     }
     private void swim(int k){
-        while (k * 2 > 1){
+        while (k > 1){
             if (pq[k/2].compareTo(pq[k]) < 0){
                 exchange(k, k/2);
             }
@@ -89,8 +89,9 @@ public class Ex36_PerformanceDriverI<Key extends Comparable<Key>> {
     public static void main(String[] args) {
         Ex36_PerformanceDriverI performanceDriverI = new Ex36_PerformanceDriverI(1000);
         StdOut.println("Length      Time");
-        for (int i = 1000; i < 10000; i += 1000){
+        for (int i = 1000000; i < 10000000; i += 1000000){
             StdOut.printf("%3d %10.1f\n", i, performanceDriverI.timeOfCost(i));
         }
+        StdOut.printf("%3d %10.1f", 10000000, performanceDriverI.timeOfCost(10000000));
     }
 }
