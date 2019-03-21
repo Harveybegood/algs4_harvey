@@ -93,8 +93,9 @@ public class Ex40_FloydMethod {
             for (int i = 1; i <= N; i++){
                 array[i] = StdRandom.uniform(1, N);
             }
-            double Ratio = heapsortStandard(array) / heapSortFloyd(array);
-            StdOut.printf("%5d %15d %15d %12.1f\n", N, heapsortStandard(array), heapSortFloyd(array), Ratio);
+            int count1 = heapsortStandard(array);
+            int count2 = heapSortFloyd(array);
+            StdOut.printf("%5d %15d %15d %12.1f\n", N, count1, count2, count1 * (1.0)/ count2);
         }
     }
 }
