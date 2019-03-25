@@ -1,7 +1,6 @@
 <h2> Applications for Sorting algorithms and priority queue </h2>
-![Diagram](https://github.com/Harveybegood/Algorithms---4th-Edition/blob/master/Chapter2_Sorting/2.5%20Applications/Applications.png)
 
-
+![Applications](https://user-images.githubusercontent.com/7615303/54907631-f507fd00-4f20-11e9-8550-14eae409e9ed.png)
 <h3>Summary</h3>
 <p>The purpose in this section is to consider ways in which some efficient methods that we have considered play a critical role in some applications and to how to make use of our sort and priority queue.</p>
 <p>A prime reason why sorting is so useful is that it is much easier to search a item in a sorted array than an unsorted array</p>
