@@ -5,3 +5,4 @@ theme: jekyll-theme-dinky
 ##hello
 *hello*
 *hello
+highlighter: rouge
