@@ -7,6 +7,11 @@
 <p>Even though these mechanisms and implementations we have studied are relatively simple, they are applicable in variety of appliations.</p>
 <h3>Sorting various types of data</h3>
 <h4>Transaction example</h4>
+ ```javascript
+if (isAwesome){
+  return true
+}
+```
 <h4>Pointer sorting</h4>
 <h4>Keys are immutable</h4>
 <h4>Exchanges are inexpensive</h4>
