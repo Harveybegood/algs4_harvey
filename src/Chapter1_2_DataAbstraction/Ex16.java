@@ -7,7 +7,7 @@ package Chapter1_2_DataAbstraction;
 *
 *   You do not have to worry about testing for overflow(see exercise 1.2.17), but use as instance variables two long
 *   values that represent the numerator and denominator to limit the possibility of overflow. Use Euclid's algorithm
-*   (see page4)to ensure that the numerator and denominator never have any common factors. Include a test client
+*   (see page4)to ensure that the numerator and denominator never have any common factors. Include a Test client
 *   that exercise all of your methods.
 *
 * */

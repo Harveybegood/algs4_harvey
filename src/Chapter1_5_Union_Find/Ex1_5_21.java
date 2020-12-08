@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 /*
-*   Erdos-Renyi model. Use your client from exercise 1.5.17 to test the hypothesis that the number of pairs generated
+*   Erdos-Renyi model. Use your client from exercise 1.5.17 to Test the hypothesis that the number of pairs generated
 *   to get one component is ~1/2NlnN
 *
 * */

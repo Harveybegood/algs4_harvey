@@ -1,6 +1,6 @@
 package Chapter3_2_BinarySearchTrees;
 
-import Tool.VisualAccumulator;
+import Tools.VisualAccumulator;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.StdDraw;
 

@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
 /*
-*   Nonuniform distribution. Write a client that generates test data by randomly ordering objects using other
+*   Nonuniform distribution. Write a client that generates Test data by randomly ordering objects using other
 *   distributions than uniform, including the following:
 *
 *       Gaussian
@@ -13,7 +13,7 @@ import edu.princeton.cs.algs4.Stopwatch;
 *       Geometric
 *       Discrete (see exercise 2.1.28 for a special case)
 *
-*   Develop and test hypotheses about the effect of such input on the performance of the algorithms in this section.
+*   Develop and Test hypotheses about the effect of such input on the performance of the algorithms in this section.
 * */
 @SuppressWarnings("unchecked")
 public class Ex2_1_35 {

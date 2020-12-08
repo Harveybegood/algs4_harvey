@@ -3,7 +3,7 @@ package Chapter2_5_Applications;
 *   Explain why selection sort is not stable
 *
 * */
-public class Ex5_SelectionNotStable {
+public class Ex05_SelectionNotStable {
     /*
     *   A sorting method is stable if it preserves the relative order of equal keys in the array.
     *   -----------------------------------------------------------------------------------------

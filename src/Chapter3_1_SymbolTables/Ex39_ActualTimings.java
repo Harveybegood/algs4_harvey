@@ -1,9 +1,9 @@
 package Chapter3_1_SymbolTables;
 
-import Tool.FileTool;
+import Tools.FileTool;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.Stopwatch;
-import test.VisualAccumulator;
+import Test.VisualAccumulator;
 
 /*
 *   Actual timings. Instrument FrequencyCounter to use Stopwatch and StdDraw to make a plot where the x-axis is the

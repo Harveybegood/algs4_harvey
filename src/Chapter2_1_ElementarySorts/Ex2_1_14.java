@@ -2,7 +2,8 @@ package Chapter2_1_ElementarySorts;
 
 import edu.princeton.cs.algs4.StdOut;
 
-import static Tool.ArrayGenerator.intsVrgWithEachAmount;
+
+import static Tools.ArrayGenerator.intsVrgWithEachAmount;
 
 /*
 *   Dequeue sort. Explain how you would sort a deck of cards, with restriction that the only allowed operations are to

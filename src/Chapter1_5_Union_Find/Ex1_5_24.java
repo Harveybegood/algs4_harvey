@@ -10,7 +10,7 @@ import java.util.List;
 
 /*
 *   Fast algorithms for Erdos-Renyi model. Add weighted quick-union and weighted quick-union with path compression to
-*   your test from exercise 1.5.23. Can you descern a difference between these two algorithms?
+*   your Test from exercise 1.5.23. Can you descern a difference between these two algorithms?
 *
 * */
 public class Ex1_5_24 {

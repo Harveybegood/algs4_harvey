@@ -4,9 +4,9 @@ package Chapter3_3_BalancedSearchTrees;
 import org.omg.CORBA.NO_IMPLEMENT;
 
 /*
-*   Create a test client TestRB.java, based on your solution to Ex3.2.10.
+*   Create a Test client TestRB.java, based on your solution to Ex3.2.10.
 *
-*   3.2.10 Write a test client TestBST.java for use in testing the implementations of min(), max(), floor(), ceiling(),
+*   3.2.10 Write a Test client TestBST.java for use in testing the implementations of min(), max(), floor(), ceiling(),
 *   select(), rank(), delete(), deleteMin(), deleteMax(), and keys() that are given in the text.
 *   Start with the standard indexing client given on page 370. Add code to take additional command-line arguments, as appropriate.
 *

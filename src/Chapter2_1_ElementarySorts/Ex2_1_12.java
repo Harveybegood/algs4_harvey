@@ -2,10 +2,11 @@ package Chapter2_1_ElementarySorts;
 
 import edu.princeton.cs.algs4.StdOut;
 
-import static Tool.ArrayGenerator.Doubles;
+
+import static Tools.ArrayGenerator.Doubles;
 
 /*
-*   Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test
+*   Instrument shellsort to print the number of compares divided by the array size for each increment. Write a Test
 *   client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values,
 *   using array sizes that are increasing powers of 10, starting at 100.
 *

@@ -8,7 +8,7 @@ import edu.princeton.cs.algs4.StdOut;
 *
 * */
 @SuppressWarnings("unchecked")
-public class Ex6_SelectWithRecursive {
+public class Ex06_SelectWithRecursive {
     private static int partition(Comparable[] a, int lo, int hi){
         int i = lo, j = hi + 1;
         Comparable v = a[lo];

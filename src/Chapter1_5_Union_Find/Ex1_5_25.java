@@ -1,12 +1,11 @@
 package Chapter1_5_Union_Find;
-
-import AnalysisOfAlgorithmsTest.Stopwatch;
+import edu.princeton.cs.algs4.Stopwatch;
 import edu.princeton.cs.algs4.StdOut;
 
 import static Chapter1_5_Union_Find.Ex1_5_18.randomGridGenerator;
 
 /*
-*   Doubling test for random grids. Develop a performance-testing client that takes an int value T from the command line
+*   Doubling Test for random grids. Develop a performance-testing client that takes an int value T from the command line
 *   and performs T trials of the following experiment: Use your client from exercise 1.5.18 to generate the connections
 *   in an N-by-N square grid , randomly oriented and in random order, then use UnionFind to determine connectivity as in
 *   our development client, looping until all sites are connected. For each N, print the value of N, the average number

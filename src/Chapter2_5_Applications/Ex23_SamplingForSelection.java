@@ -1,6 +1,7 @@
 package Chapter2_5_Applications;
 
-import Tool.QuickSort;
+
+import Tools.QuickSort;
 import edu.princeton.cs.algs4.StdRandom;
 
 /*

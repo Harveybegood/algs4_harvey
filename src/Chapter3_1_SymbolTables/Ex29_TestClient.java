@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /*
-*   Test client. Write a test client TestBinarySearch.java for use in testing the implementation of min(), max(), floor()
+*   Test client. Write a Test client TestBinarySearch.java for use in testing the implementation of min(), max(), floor()
 *   , ceiling(), select(), rank(), deleteMin(), deleteMax(), and keys() that are given in the text. Start with the
 *   standard indexing client given on page 370. Add code to take additional command-line arguments, as appropriate.
 *

@@ -5,11 +5,11 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
 /*
-*   Nonuniform data. Write a client that generates test data that is not uniform, including the following:
+*   Nonuniform data. Write a client that generates Test data that is not uniform, including the following:
 *       Half the data is 0s, half 1s
 *       Half the data is 0s, half the remainder is 1s, half the remainder is 2s, and so forth.
 *       Half the data is 0s, half random int values.
-*   Develop and test hypotheses about the effect of such input on the performance of the algorithms in this section.
+*   Develop and Test hypotheses about the effect of such input on the performance of the algorithms in this section.
 *
 * */
 @SuppressWarnings("unchecked")

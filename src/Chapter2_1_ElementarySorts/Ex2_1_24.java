@@ -5,9 +5,9 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
 /*
-*   Insertion sort with sentinel. Develop an implementation of insertion sort that eliminates the j > 0 test in the
+*   Insertion sort with sentinel. Develop an implementation of insertion sort that eliminates the j > 0 Test in the
 *   inner loop by first putting the smallest item into position. Use SortCompare to evaluate the effectiveness of doing
-*   so. Note: It is often possible to avoid an index-out-of-bounds test in this way - the element that enables the test
+*   so. Note: It is often possible to avoid an index-out-of-bounds Test in this way - the element that enables the Test
 *   to be eliminated is known as a sentinel.
 *
 * */

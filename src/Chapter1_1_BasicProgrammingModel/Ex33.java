@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 /*
 *   Matrix library. Write a library Matrix that implements the following API:
-*   Develop a test client that reads values from standard input and tests all the methods.
+*   Develop a Test client that reads values from standard input and tests all the methods.
 *
 * */
 public class Ex33 {

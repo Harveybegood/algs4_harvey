@@ -13,7 +13,7 @@ import edu.princeton.cs.algs4.StdOut;
 *         if it is equal, the defined variable like count will plus one time.
 *
 * */
-public class Ex8_Frequency {
+public class Ex08_Frequency {
     private static int cnt;
     public static void main(String[] args) {
         String s = StdIn.readString();

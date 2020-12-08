@@ -5,11 +5,11 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /*
-*   Stack generability. Suppose that we have a sequence of intermixed push and pop operations as with our test stack client,
+*   Stack generability. Suppose that we have a sequence of intermixed push and pop operations as with our Test stack client,
 *   where the integers 0, 1, ..., N-1 in that order(push directives)are intermixed with N minus signs(pop directives). Devise
 *   an algorithm that determines whether the intermixed sequence causes the stack to underflow. (You may use only an amount
 *   of space independent of N - you cannot store the integers in a data structure.) Devise a linear-time algorithm that
-*   determines whether a given permutation can be generated as output by our test client(depending on where the pop
+*   determines whether a given permutation can be generated as output by our Test client(depending on where the pop
 *   directives occur).
 *
 *   Solution: The stack does not overflow unless there exists an integer k such that the first k pop operations occur before

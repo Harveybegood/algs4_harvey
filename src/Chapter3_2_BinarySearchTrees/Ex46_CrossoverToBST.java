@@ -1,7 +1,7 @@
 package Chapter3_2_BinarySearchTrees;
 
 
-import AnalysisOfAlgorithmsTest.Stopwatch;
+import edu.princeton.cs.algs4.Stopwatch;
 import Chapter3_1_SymbolTables.binarySearchST;
 import edu.princeton.cs.algs4.StdOut;
 

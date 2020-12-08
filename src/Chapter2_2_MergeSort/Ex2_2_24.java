@@ -5,9 +5,9 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
 /*
-*   Sort-test improvement. Run empirical studies for large randomly ordered arrays to study the effectiveness of the
+*   Sort-Test improvement. Run empirical studies for large randomly ordered arrays to study the effectiveness of the
 *   modification described in exercise 2.2.8 for random data. In particular, develop a hypothesis about the average
-*   number of times the test(whether an array is sorted)succeeds, as a function of N(the original array size for the sort
+*   number of times the Test(whether an array is sorted)succeeds, as a function of N(the original array size for the sort
 *
 * */
 @SuppressWarnings("unchecked")

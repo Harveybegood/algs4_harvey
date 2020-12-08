@@ -12,7 +12,7 @@ import edu.princeton.cs.algs4.StdOut;
 *
 * */
 @SuppressWarnings("unchecked")
-public class Ex4_Dedup {
+public class Ex04_Dedup {
     //private static String[] a;
     private static String[] a = {"i","t","d","i","c","a","t","i","o","n","i","e","o","d"};
     private static String[] a1 = {"i","i","i","i","i","i","i","i"};

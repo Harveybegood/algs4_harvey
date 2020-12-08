@@ -6,9 +6,9 @@ import edu.princeton.cs.algs4.Stopwatch;
 
 
 /*
-*   Doubling test. Write a client that perform a doubling test for sort algorithms. Start at N equal to 1000, and print
+*   Doubling Test. Write a client that perform a doubling Test for sort algorithms. Start at N equal to 1000, and print
 *   N, the predicted number of seconds, the actual number of seconds, and the ratio as N doubles. Use your program to
-*   validate that insertion sort and selection sort are quadratic for random inputs, and formulate and test a hypothesis
+*   validate that insertion sort and selection sort are quadratic for random inputs, and formulate and Test a hypothesis
 *   for shellsort.
 *
 * */

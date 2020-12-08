@@ -1,12 +1,12 @@
 package Chapter3_1_SymbolTables;
 
-import AnalysisOfAlgorithmsTest.Stopwatch;
-import Tool.FileTool;
+import edu.princeton.cs.algs4.Stopwatch;
+import Tools.FileTool;
 import edu.princeton.cs.algs4.StdOut;
 
 /*
 *   Performance validation I. Run doubling tests that use the first N words of Tale of Two Cities for various values of
-*   N to test the hypothesis that the running time of FrequencyCounter is quadratic when it uses SequentialSearchST for
+*   N to Test the hypothesis that the running time of FrequencyCounter is quadratic when it uses SequentialSearchST for
 *   its symbol table.
 *
 * */

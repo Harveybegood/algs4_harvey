@@ -1,6 +1,6 @@
 package Chapter3_3_BalancedSearchTrees;
 
-import Chapter3_2_BinarySearchTree.Ex38_TreeDrawing;
+;
 import edu.princeton.cs.algs4.StdDraw;
 
 /*

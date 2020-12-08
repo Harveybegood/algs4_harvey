@@ -1,7 +1,7 @@
 package Chapter3_3_BalancedSearchTrees;
 /*
 *   Optimal storage. Modify RedBlackBST so that it does not use any extra storage for the color bit, based on the following
-*   trick: To color a node red, swap its two links. Then, to test whether a node is red, test whether its left child is larger
+*   trick: To color a node red, swap its two links. Then, to Test whether a node is red, Test whether its left child is larger
 *   than its right child. You have to modify the compares to accommodate the possible link swap, and this trick replaces bit
 *   compares with key compares that are presumably more expensive, but it shows that the bit in the nodes can be eliminated,
 *   if necessary.
@@ -41,7 +41,7 @@ public class Ex29_OptimalStorage<Key extends Comparable<Key>, Value> {
         node.right = temp;
     }
 
-    // To test whether a node is red,
+    // To Test whether a node is red,
     private boolean isRed(Node node){
         if (node == null){return false;}
         if (node == root){return false;}

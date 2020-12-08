@@ -3,7 +3,7 @@ package Chapter3_3_BalancedSearchTrees;
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private static final boolean RED = true;
     private static final boolean BLACK = false;
-    private class Node{
+    public class Node{
         Key key;
         Value value;
         Node left, right;
@@ -16,9 +16,9 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             this.color = color;
         }
     }
-    private Node root;
+    public Node root;
     // create a method to tell if it's node is RED
-    private boolean isRed(Node node){
+    public boolean isRed(Node node){
         if (node == null) return false;
         return node.color;
     }

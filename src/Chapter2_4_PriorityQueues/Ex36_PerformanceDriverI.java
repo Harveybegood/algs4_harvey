@@ -1,6 +1,6 @@
 package Chapter2_4_PriorityQueues;
 
-import AnalysisOfAlgorithmsTest.Stopwatch;
+import edu.princeton.cs.algs4.Stopwatch;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 

@@ -1,6 +1,6 @@
 package Chapter2_1_ElementarySorts;
 /*
-*   Give an example of an array of N items that maximize the number of times the test a[j] < a[min] fails (and,
+*   Give an example of an array of N items that maximize the number of times the Test a[j] < a[min] fails (and,
 *   therefore, min gets updated) during the operation of selection sort(Algorithm2.1).
 *
 * */

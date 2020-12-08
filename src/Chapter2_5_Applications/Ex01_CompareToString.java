@@ -1,9 +1,6 @@
 package Chapter2_5_Applications;
-/*
-*   Consider the following implementation of the compareTo() method for String. How does the third line help with efficiency?
-*
-* */
-public class Ex1_CompareToString {
+
+public class Ex01_CompareToString {
     //Ex1_CompareToString ex1_compareToString = new Ex1_CompareToString();
     private String s;
     public int compareTo(String that){
@@ -18,7 +15,7 @@ public class Ex1_CompareToString {
     }
 
     public static void main(String[] args) {
-        Ex1_CompareToString ex1_compareToString = new Ex1_CompareToString();
+
 
     }
 }

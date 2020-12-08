@@ -57,7 +57,7 @@ public class Ex2_2_23 {
             }
         }
     }
-    // test whether the array is already in order
+    // Test whether the array is already in order
     private static void alreadyInOrder(Comparable[] a){
         aux = new Comparable[a.length];
         alreadyInOrder(a, 0, a.length - 1);
@@ -163,7 +163,7 @@ public class Ex2_2_23 {
         cutOffSmallSubArray(experimentArray1);
         double time1 = timer1.elapsedTime();
         StdOut.println(time1);
-        StdOut.println("test whether the array is already in order");
+        StdOut.println("Test whether the array is already in order");
         Comparable[] experimentArray2 = generateAllArrays(100000);
         Stopwatch timer2 = new Stopwatch();
         alreadyInOrder(experimentArray2);

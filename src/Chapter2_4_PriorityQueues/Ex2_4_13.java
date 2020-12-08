@@ -1,7 +1,7 @@
 package Chapter2_4_PriorityQueues;
 
 /*
-*       Describe a way to avoid the j < N test in sink();
+*       Describe a way to avoid the j < N Test in sink();
 *
 * */
 public class Ex2_4_13<Key extends Comparable<Key>> {

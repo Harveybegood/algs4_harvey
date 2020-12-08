@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.Transaction;
 
 /*
-*   Transaction sort test client. Write a class SortTransactions that consists of a static method main() that reads
+*   Transaction sort Test client. Write a class SortTransactions that consists of a static method main() that reads
 *   a sequence of transactions from standard input, sorts them, and prints the results on standard output
 *
 * */

@@ -2,7 +2,7 @@ package Chapter2_5_Applications;
 /*
 *   About how many compares are required, on the average, to find the smallest of N items using select().
 * */
-public class Ex7_NumberOfCompares {
+public class Ex07_NumberOfCompares {
     /*
     *   Proof: An analysis similar to, but significantly more complex than, the proof of
         Proposition K for quicksort leads to the result that the average number of compares

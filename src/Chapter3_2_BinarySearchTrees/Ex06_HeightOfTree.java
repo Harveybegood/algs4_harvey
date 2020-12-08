@@ -130,7 +130,7 @@ public class Ex06_HeightOfTree<Key extends Comparable<Key>, Value> {
     public static void main(String[] args) {
         Ex06_HeightOfTree<Integer, String> heightOfTree = new Ex06_HeightOfTree<>();
         /*for (int i = 0; i < 10; i++){
-            height.put(i, i + " test");
+            height.put(i, i + " Test");
         }*/
         heightOfTree.put(5, " test" + 5);
         heightOfTree.put(7, " test" + 7);

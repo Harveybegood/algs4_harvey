@@ -7,7 +7,7 @@ import edu.princeton.cs.algs4.Stopwatch;
 /*
 *   Corner cases. Test quick sort on large nonrandom arrays of the kind described in Exercise2.1.35 and 2.1.36 both with
 *   and without the initial random shuffle. How does shuffling affect its performance for these arrays?
-*       test data generated as below described
+*       Test data generated as below described
 *
 *       Gaussian, Poisson, Geometric and Discrete
 *       Half the data is 0s, half 1s.

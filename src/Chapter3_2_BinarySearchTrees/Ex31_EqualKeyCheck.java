@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 /*
 *   Equal key check. Write a method hasNoDuplicate() that takes a Node as argument and returns true if there are no equal
-*   keys in the binary tree rooted at the argument node, false otherwise. Assume that the test of the previous exercise
+*   keys in the binary tree rooted at the argument node, false otherwise. Assume that the Test of the previous exercise
 *   has passed.
 *
 * */

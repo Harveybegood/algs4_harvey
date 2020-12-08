@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.Transaction;
 /*
 *   Stock market trading. Investors place buy and sell orders for a particular stock on an electronic exchange,
 *   specifying a maximum buy or minimum sell price that they are willing to pay, and how many shares they wish to
-*   trade at that price. Develop a program that uses priority queue to match up buyers and sellers and test it
+*   trade at that price. Develop a program that uses priority queue to match up buyers and sellers and Test it
 *   through simulation. Maintain two priority queues, one for buyers and one for sellers, executing traders whenever
 *   a new order can be matched with an existing order or orders.
 *

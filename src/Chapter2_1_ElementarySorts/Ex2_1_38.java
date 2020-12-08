@@ -16,7 +16,7 @@ import java.util.Map;
 *       double key, ten String values(all at least ten characters)
 *       int key, one int[20] value
 *
-*   Develop and test hypotheses about the effect of such input on the performance of the algorithms in this section.
+*   Develop and Test hypotheses about the effect of such input on the performance of the algorithms in this section.
 *
 * */
 @SuppressWarnings("unchecked")

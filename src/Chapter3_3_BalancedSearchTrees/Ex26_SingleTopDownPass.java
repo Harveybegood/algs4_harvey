@@ -1,5 +1,4 @@
 package Chapter3_3_BalancedSearchTrees;
-import Chapter1_3_Bags_Queues_Stacks.Ex29;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdOut;

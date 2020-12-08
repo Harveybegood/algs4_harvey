@@ -22,7 +22,7 @@ public class Ex2_3_25 {
         }
         return array;
     }
-    // double ratio test
+    // double ratio Test
     private static void doubleTest(Comparable[] array, int cutoff){
         Stopwatch timer = new Stopwatch();
         sort(array, cutoff);

@@ -40,7 +40,7 @@ import java.util.Arrays;
 *
 * */
 @SuppressWarnings("unchecked")
-public class Ex9_SortFileType {
+public class Ex09_SortFileType {
     public static class DJI implements Comparable<DJI>{
         private int amount;
         private Date date;

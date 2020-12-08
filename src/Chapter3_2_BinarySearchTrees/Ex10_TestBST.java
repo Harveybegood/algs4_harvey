@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.StdOut;
 
 /*
-*   Write a test client TestBST.java for use in testing the implementations of min(), max(), floor(), ceiling(),
+*   Write a Test client TestBST.java for use in testing the implementations of min(), max(), floor(), ceiling(),
 *   select(), rank(), delete(), deleteMin(), deleteMax(), and keys() that are given in the text. Start with the
 *   standard indexing client given on page 370. Add code to take additional command-line arguments, as appropriate.
 *
@@ -228,9 +228,9 @@ public class Ex10_TestBST<Key extends Comparable<Key>, Value>{
         // print the size of BST
         StdOut.println(testBST.size(testBST.root) + " Expected with 8");
         StdOut.println(testBST.size(testBST.root.left) + " Expected with 6");
-        // test method get() to get the value of key A
+        // Test method get() to get the value of key A
         StdOut.println("Key A expecting value 1 : " + testBST.get("A"));
-        // test method put(), one to change the value of key A to 10, add a new Key T with value 5
+        // Test method put(), one to change the value of key A to 10, add a new Key T with value 5
         testBST.put("A", 10);
         testBST.put("T", 5);
         StdOut.println("The value of Key A changed as 10 : " + testBST.get("A"));
@@ -240,29 +240,29 @@ public class Ex10_TestBST<Key extends Comparable<Key>, Value>{
             StdOut.print(s + " ");
         }
         StdOut.println();
-        // min() and max() methods test
+        // min() and max() methods Test
         StdOut.println("Expected minimum key A : " + testBST.min());
         StdOut.println("Expected Maximum key X : " + testBST.max());
-        // ceiling() and floor() methods test
+        // ceiling() and floor() methods Test
         StdOut.println("The given Key I for ceiling expecting M : " + testBST.ceiling("I"));
         StdOut.println("The given Key B for floor expecting A : " + testBST.floor("B"));
         StdOut.println("The given Key R for ceiling expecting R : " + testBST.ceiling("R"));
         StdOut.println("The given Key R for floor expecting R : " + testBST.floor("R"));
-        // select() method test
+        // select() method Test
         for (int i = 0; i < 9; i++){
             StdOut.print(testBST.select(i) + " ");
         }
         StdOut.println();
-        // rank() method test
+        // rank() method Test
         StdOut.println("The rank of Key H expecting 3 : " + testBST.rank("H"));
-        // deleteMin() method test
+        // deleteMin() method Test
         testBST.deleteMin();
         StdOut.println("Expecting size 8 : " + testBST.size());
         StdOut.println("Expected min key C : " + testBST.min());
-        // delete() method test
+        // delete() method Test
         testBST.delete("X");
         StdOut.println("Current Value expecting T : " + testBST.max());
-        // test the high of the tree
+        // Test the high of the tree
         StdOut.println("Height of Tree Expecting 4 : " + testBST.heightOfTree());
         StdOut.println("Height of Tree Expecting 4 : " + testBST.heightByRec());
     }

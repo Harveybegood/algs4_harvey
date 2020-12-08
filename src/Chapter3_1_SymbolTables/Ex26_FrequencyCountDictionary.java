@@ -1,7 +1,7 @@
 package Chapter3_1_SymbolTables;
 
 
-import Tool.FileTool;
+import Tools.FileTool;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 

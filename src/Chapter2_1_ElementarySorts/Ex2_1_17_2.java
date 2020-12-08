@@ -5,8 +5,9 @@ import edu.princeton.cs.algs4.StdDraw;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-import static Tool.ArrayGenerator.Doubles;
-import static Tool.ArrayGenerator.parseDoubles;
+import static Tools.ArrayGenerator.Doubles;
+import static Tools.ArrayGenerator.parseDoubles;
+
 
 public class Ex2_1_17_2 {
     public static Double[] maxComparesSequence =
