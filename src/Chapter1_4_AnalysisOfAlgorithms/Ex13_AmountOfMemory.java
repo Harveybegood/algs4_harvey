@@ -67,10 +67,11 @@ public class Ex13_AmountOfMemory {
         }
         /*
         *   object overhead: 16
-        *   String object: 8
+        *   String reference: 8
+        *   String array: 8 * N
         *   int value: 4
         *   padding: 4
-        *   Total: 32 bytes
+        *   Total: 32 + 8 * N bytes
         * */
     }
 //    point in the plane
@@ -120,7 +121,15 @@ public class Ex13_AmountOfMemory {
     }
 //    double wrapper
     public class Double{
-
+        private double x;
+        public Double(double x){
+            this.x = x;
+        }
+        /* 
+            object overhead: 16
+            double x: 8
+            Total: 24 bytes
+        */
     }
 
     public static void main(String[] args) {
