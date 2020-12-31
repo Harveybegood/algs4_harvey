@@ -65,11 +65,16 @@ public class Ex13_AmountOfMemory {
         public FixedCapacityStackOfStrings(int cap){
             a = new String[cap];
         }
+      
         /*
         *   object overhead: 16
-        *   String reference: 8
-        *   String array: 8 * N
-        *   int value: 4
+        *   String[] array: 
+                          object overhead: 16
+                          int size: 4
+                          padding: 4
+                          Reference to String: 8 * N
+                          Char: N * (object overhead: 16 + ) ?????
+        *   int N value: 4
         *   padding: 4
         *   Total: 32 + 8 * N bytes
         * */
