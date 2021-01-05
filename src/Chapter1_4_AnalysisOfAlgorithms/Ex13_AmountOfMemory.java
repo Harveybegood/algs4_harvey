@@ -70,13 +70,15 @@ public class Ex13_AmountOfMemory {
         *   object overhead: 16
         *   String[] array: 
                           object overhead: 16
-                          int size: 4
-                          padding: 4
-                          Reference to String: 8 * N
-                          Char: N * (object overhead: 16 + ) ?????
+                          int offset: 4
+                          int count: 4
+                          int hash: 4
+                          a reference to Character array: 8
+                          Char[]: (object overhead: 16 + char: 2 * N + int lengthOfChar: 4 + padding: 4) -> 24 + 2 * N
+                          : 64 + 2 * N
         *   int N value: 4
         *   padding: 4
-        *   Total: 32 + 8 * N bytes
+        *   Total: 32 + (64 + 2 * N) * N bytes
         * */
     }
 //    point in the plane
