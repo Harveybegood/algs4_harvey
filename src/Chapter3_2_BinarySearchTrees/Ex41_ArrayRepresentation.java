@@ -13,15 +13,17 @@ public class Ex41_ArrayRepresentation<Key extends Comparable<Key>, Value> {
         Key[] keys;
         Value[] values;
         int[] left, right;
-        int countOfBST;
+        int numberOfNodeOfTree;
         int index;
-        public BSTWithThreeArrays(int index){
+        public BSTWithThreeArrays(int numberOfNodeOfTree){
             keys = (Key[]) new Comparable[n];
             values = (Value[]) new Object[n];
             left = new int[n];
             right = new int[n];
-            this.index = index;
+            this.index = 10;
+            this.numberOfNodeOfTree = numberOfNodeOfTree;
         }
+        // one with array indices corresponding to left links, one with array indices corresponding to right links
         public void put(Key key, Value value){
             put(0, key, value);
         }
