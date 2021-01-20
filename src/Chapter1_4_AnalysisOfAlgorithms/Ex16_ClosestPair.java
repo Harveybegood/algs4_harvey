@@ -37,10 +37,11 @@ public class Ex16_ClosestPair {
                 n = i;
             }
         }
-        StdOut.printf("%.2f %.2f %.2f\n", array[m], array[n], difference);
+        StdOut.printf("THe pairs: %.2f %.2f the value of difference: %.2f\n", array[m], array[n], difference);
     }
     public static void main(String[] args) {
         StdOut.println("n number of double values");
+
         closestPair(arrayWithDouble(15));
     }
 }
