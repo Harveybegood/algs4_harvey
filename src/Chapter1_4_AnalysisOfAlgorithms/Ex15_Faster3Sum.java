@@ -76,11 +76,12 @@ public class Ex15_Faster3Sum {
 
     //  ThreeSumFaster
     public static int ThreeSumFaster(int[] array){
-        int lo = 0;
+        //int lo = 0;
         int hi = array.length - 1;
         int cnt = 0;
         Arrays.sort(array);
-        for (int i = lo; i <= hi; i++){
+        for (int i = 0; i <= hi; i++){
+            int lo = i + 1;
             while (lo < hi){
                 if ((array[i] + array[lo] + array[hi]) > 0){
                     hi--;
