@@ -2,105 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec69d88a-426c-4b14-824c-cf13c9e26e2b" name="Default" comment="add exercise 32 Amortized analysis">
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex23.java" afterPath="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex23.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex33.java" afterPath="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex33.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex37.java" afterPath="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex37.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex15.java" afterPath="$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex15.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex16.java" afterPath="$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex16.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_3_BagsQueuesStacks/Ex45_StackGenerability.java" afterPath="$PROJECT_DIR$/src/Chapter1_3_BagsQueuesStacks/Ex45_StackGenerability.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_21.java" afterPath="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_21.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_24.java" afterPath="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_24.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_25.java" afterPath="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_25.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex22_TransactionSortTestClient.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex22_TransactionSortTestClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_12.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_12.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_24.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_24.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_3.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_3.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_31.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_31.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_35.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_35.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_36.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_36.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_37.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_37.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_38.java" afterPath="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_38.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_10.java" afterPath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_10.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_11.java" afterPath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_11.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_23.java" afterPath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_23.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_24.java" afterPath="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_24.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_3_QuickSort/Ex2_3_17.java" afterPath="$PROJECT_DIR$/src/Chapter2_3_QuickSort/Ex2_3_17.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_3_QuickSort/Ex2_3_25.java" afterPath="$PROJECT_DIR$/src/Chapter2_3_QuickSort/Ex2_3_25.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_3_QuickSort/Ex2_3_30.java" afterPath="$PROJECT_DIR$/src/Chapter2_3_QuickSort/Ex2_3_30.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_4_PriorityQueues/Ex2_4_13.java" afterPath="$PROJECT_DIR$/src/Chapter2_4_PriorityQueues/Ex2_4_13.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_4_PriorityQueues/Ex2_4_33_IndexPQImplementation.java" afterPath="$PROJECT_DIR$/src/Chapter2_4_PriorityQueues/Ex2_4_33_IndexPQImplementation.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex22_StockMarketTrading.java" afterPath="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex22_StockMarketTrading.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex29_TestClient.java" afterPath="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex29_TestClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex35_PerformanceValidationI.java" afterPath="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex35_PerformanceValidationI.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex39_ActualTimings.java" afterPath="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex39_ActualTimings.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex06_HeightOfTree.java" afterPath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex06_HeightOfTree.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex10_TestBST.java" afterPath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex10_TestBST.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex31_EqualKeyCheck.java" afterPath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex31_EqualKeyCheck.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex42_HibbardDeletionDegradation.java" afterPath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex42_HibbardDeletionDegradation.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex21_TestRB.java" afterPath="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex21_TestRB.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex29_OptimalStorage.java" afterPath="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex29_OptimalStorage.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/ASequenceOfChars.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/ASequenceOfChars.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/AlDoubleValues.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/AlDoubleValues.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Body.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Date.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/FilesNameAsArgument.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/JavaStreams.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/PointsConnected.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Rectangle.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Rolls.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Rolls.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Standardinput.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestWhile.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestWhile1.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/Transaction.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/TreeHeightAndDepth.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/VisualAccumulator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/addequal.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/arcsin.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/charactersCat.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/charactersCat.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/coercionInt.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/data.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/data1.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/defaultArrayValues.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/drawARectangle.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/drawPoints.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/drawRectangle.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/evaluate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/evaluate.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/generateSeqChars.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/gitprogramming.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/importQueue.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/interval2D.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/listToArrayTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/newtonIterationSqrt.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/pointsDraw.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/printingPoints.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/recursive.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/remainderChangingWithHalf.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/reverseArray.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/rowLength.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/sinCos.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/sinCos.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/splitWithColon.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/standardInput.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/standardInput.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/staticSetOfInts.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/staticSetOfInts.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/test1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/test1.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/test2.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/test3.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/testFloor.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/testForRecursive.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/testReadAllInts.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/testReadAllInts.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/testReturn.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_psvm_throwException.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_psvm_throwException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/zeroOneTwoForth.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex41_ArrayRepresentation.java" afterPath="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex41_ArrayRepresentation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,51 +15,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ex41_Delete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex41_Delete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="149" column="50" lean-forward="false" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ex38_AmortizedCostPlots.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex38_AmortizedCostPlots.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ex02.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex02.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ex32_AmortizedAnalysis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chapter1_4_AnalysisOfAlgorithms/Ex32_AmortizedAnalysis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DivisionRemainderForNegativeIntegers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DivisionRemainderForNegativeIntegers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/DivisionRemainderForNegativeIntegers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ex01_GiveValueExpressions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex01_GiveValueExpressions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ex41_ArrayRepresentation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex41_ArrayRepresentation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <element signature="e#1186#1187#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Algorithm3_3_BST.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Algorithm3_3_BST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="152" column="22" lean-forward="true" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -182,9 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex02_PrintTwoCompoundWords.java" />
-        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex01_CompareToString.java" />
-        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex03_Criticize.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex04_Dedup.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex05_SelectionNotStable.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex06_SelectWithRecursive.java" />
@@ -192,7 +85,6 @@
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex9_SortFileType.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex08_Frequency.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/test.java" />
-        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex23_SamplingForSelection.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex13_LoadBalancing.java" />
         <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex32_8Puzzle.java" />
         <option value="$PROJECT_DIR$/src/readme.md" />
@@ -201,7 +93,31 @@
         <option value="$PROJECT_DIR$/src/Chapter1_4_AnalysisOfAlgorithms/Ex32_AmortizedAnalysis.java" />
         <option value="$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex01_GiveValueExpressions.java" />
         <option value="$PROJECT_DIR$/src/test/DivisionRemainderForNegativeIntegers.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_4_PriorityQueues/Ex36_PerformanceDriverI.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_28.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_12.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_14.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_17_2.java" />
+        <option value="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_25.java" />
+        <option value="$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_13.java" />
+        <option value="$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex15.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex23_SamplingForSelection.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex17_CheckStability.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex26_FrequencyCountDictionary.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex35_PerformanceValidationI.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex39_ActualTimings.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex46_CrossoverToBST.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex47_AverageSearchTime.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex17_CompareRedBlackBST_BST.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex26_SingleTopDownPass.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/RedBlackBST.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex01_.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex01_CompareToString.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex02_PrintTwoCompoundWords.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex03_Criticize.java" />
+        <option value="$PROJECT_DIR$/src/Chapter2_5_Applications/Ex30_BoernersTheorem.java" />
         <option value="$PROJECT_DIR$/src/Test/DivisionRemainderForNegativeIntegers.java" />
+        <option value="$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex41_ArrayRepresentation.java" />
       </list>
     </option>
   </component>
@@ -229,8 +145,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,18 +164,17 @@
               <item name="algs4_harvey" type="b2602c69:ProjectViewProjectNode" />
               <item name="algs4_harvey" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter3_2_BinarySearchTrees" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/algs4.jar!/" />
@@ -483,8 +399,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.49585405" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2475356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25027382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -499,6 +414,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -506,212 +422,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Algorithm3_3_BST.java</url>
+          <line>157</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex38_AmortizedCostPlots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex41_Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2384">
-          <caret line="149" column="50" lean-forward="false" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex38_AmortizedCostPlots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex13_LoadBalancing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex13_LoadBalancing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex04_Dedup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex04_Dedup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex04_Dedup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex04_Dedup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex02_PrintTwoCompoundWords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex07_NumberOfCompares.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex06_SelectWithRecursive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex05_SelectionNotStable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex9_SortFileType.java" />
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex08_Frequency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex01_CompareToString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex30_BoernersTheorem.java" />
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex17_CheckStability.java" />
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex23_SamplingForSelection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex25_PointsInThePlane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex03_Criticize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex25_PointsInThePlane$Point2D.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex25_PointsInThePlane.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex33_RandomTransactions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex16_UnbiasedElection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex04_Dedup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex18_ForceStability.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -756,14 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex41_Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="149" column="50" lean-forward="false" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex02.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -775,13 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex15.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -806,42 +514,271 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex38_AmortizedCostPlots.java">
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex22_StockMarketTrading.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="448">
+          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_4_PriorityQueues/Ex36_PerformanceDriverI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_2_MergeSort/Ex2_2_28.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_12.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_14.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1856">
+          <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_1_ElementarySorts/Ex2_1_17_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_25.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter1_5_Union_Find/Ex1_5_13.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter1_2_DataAbstraction/Ex15.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex23_SamplingForSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex17_CheckStability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex08_Frequency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex07_NumberOfCompares.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex26_FrequencyCountDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex35_PerformanceValidationI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex39_ActualTimings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="57" lean-forward="true" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex46_CrossoverToBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex47_AverageSearchTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex17_CompareRedBlackBST_BST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2092">
+          <caret line="171" column="45" lean-forward="true" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex26_SingleTopDownPass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/RedBlackBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex33_Certification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_3_BalancedSearchTrees/Ex41_Delete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="149" column="50" lean-forward="false" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex02.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="224">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter1_4_AnalysisOfAlgorithms/Ex32_AmortizedAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_1_SymbolTables/Ex38_AmortizedCostPlots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex01_.java" />
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex01_CompareToString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex09_SortFileType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex02_PrintTwoCompoundWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex03_Criticize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex30_BoernersTheorem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex38.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="50" lean-forward="true" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/DivisionRemainderForNegativeIntegers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter2_5_Applications/Ex21_MultidimensionalSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter1_1_BasicProgrammingModel/Ex01_GiveValueExpressions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chapter1_4_AnalysisOfAlgorithms/Ex32_AmortizedAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/DivisionRemainderForNegativeIntegers.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Ex41_ArrayRepresentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter3_2_BinarySearchTrees/Algorithm3_3_BST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="152" column="22" lean-forward="true" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
           <folding />
         </state>
       </provider>

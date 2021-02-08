@@ -3,9 +3,9 @@ package Chapter1_1_BasicProgrammingModel;
 import edu.princeton.cs.algs4.StdOut;
 
 /*
-*   Give the value of each of the following expressions:
-*
-* */
+ *   Give the value of each of the following expressions:
+ *
+ * */
 public class Ex01_GiveValueExpressions {
     public static void main(String[] args) {
         int a = (0 + 15) / 2;

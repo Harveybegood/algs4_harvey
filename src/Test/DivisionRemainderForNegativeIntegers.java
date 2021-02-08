@@ -29,7 +29,7 @@ public class DivisionRemainderForNegativeIntegers {
     *
     *       why in the book says that the quotient a/b rounds toward 0?
     *
-    *       In here round which means drop out all digits after .
+    *       In here this round which means drop out all digits after point (.)
     *
     *       The remainder a % b is defined such that (a / b) * b + a % b is always equal to a.
     *
