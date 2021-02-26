@@ -11,7 +11,8 @@ public class LinearProbingHashST<Key, Value> {
         values = (Value[]) new Object[M];
     }
     public LinearProbingHashST(int cap){
-        LinearProbingHashST<Key, Value> linearProbingHashST;
+        keys = (Key[]) new Object[cap];
+        values = (Value[]) new Object[cap];
     }
     private int hash(Key key){
         return (key.hashCode() & 0x7fffffff) % M;
@@ -28,7 +29,7 @@ public class LinearProbingHashST<Key, Value> {
         M = t.M;
     }
     public void put(Key key, Value value){
-        if (N >= M/2){resize();}
+        if (N >= M/2){resize(2 * M);}
         int i;
         for (i = hash(key); keys[i] != null; i = (i+1)%M){
             if (keys[i].equals(key)){
@@ -71,12 +72,12 @@ public class LinearProbingHashST<Key, Value> {
         }
         N--;
         if (N > 0 && N == M/8){
-            resize();
+            resize(M/2);
         }
     }
 
     public static void main(String[] args) {
-        LinearProbingHashST<String, Integer> linearProbingHashST = new LinearProbingHashST<>();
+        LinearProbingHashST<String, Integer> linearProbingHashST = new LinearProbingHashST<>(2);
         linearProbingHashST.put("S", 0);
         linearProbingHashST.put("E", 1);
         linearProbingHashST.put("A", 2);
