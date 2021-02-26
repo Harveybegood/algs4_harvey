@@ -5,6 +5,8 @@ package Chapter3_4_HashTables;
 *
 * */
 import Chapter3_1_SymbolTables.SequentialSearchST;
+import edu.princeton.cs.algs4.StdOut;
+
 @SuppressWarnings("unchecked")
 public class SeparateChainingHashST<Key, Value> {
     private int N; // number of key-value pairs
@@ -25,10 +27,21 @@ public class SeparateChainingHashST<Key, Value> {
         return (key.hashCode() & 0x7fffffff) % M;
     }
     public Value get(Key key){
-        return (Value) st[hash(key)].get(key);
+        return st[hash(key)].get(key);
     }
     public void put(Key key, Value value){
         st[hash(key)].put(key, value);
     }
 
+    public static void main(String[] args) {
+        SeparateChainingHashST<String, Integer> stringIntegerSeparateChainingHashST = new SeparateChainingHashST<>();
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("S"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("S"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("E"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("A"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("R"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("C"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("H"));
+        StdOut.println(stringIntegerSeparateChainingHashST.hash("E"));
+    }
 }
