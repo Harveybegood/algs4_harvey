@@ -1,14 +1,15 @@
 package Chapter3_1_SymbolTables;
 
 import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.StdOut;
 
 public class SequentialSearchST<Key, Value> {
-    private Node first;
-    private int n;
-    private class Node{
-        Node next;
-        Value value;
-        Key key;
+    public Node first;
+    public int n;
+    public class Node{
+        public Node next;
+        public Value value;
+        public Key key;
         public Node(Node next, Value val, Key key){
             this.next = next;
             this.value = val;
@@ -33,11 +34,11 @@ public class SequentialSearchST<Key, Value> {
         for (Node x = first; x != null; x = x.next){
             if (key.equals(x.key)){
                 x.value = val;
-                n++;
                 return;
             }
         }
         first = new Node(first, val, key);
+        n++;
     }
     public boolean isEmpty(){return n == 0;}
     public int size(){return n;}
@@ -67,5 +68,16 @@ public class SequentialSearchST<Key, Value> {
             queue.enqueue(node.key);
         }
         return queue;
+    }
+
+    public static void main(String[] args) {
+        SequentialSearchST<String, Integer> sequentialSearchST = new SequentialSearchST<>();
+        sequentialSearchST.put("S", 9);
+        sequentialSearchST.put("O", 5);
+        sequentialSearchST.put("R", 8);
+        sequentialSearchST.put("T", 11);
+        for (String s : sequentialSearchST.keys()){
+            StdOut.print(s + " ");
+        }
     }
 }
