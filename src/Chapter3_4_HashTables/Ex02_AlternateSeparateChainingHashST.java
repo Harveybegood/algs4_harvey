@@ -40,6 +40,7 @@ public class Ex02_AlternateSeparateChainingHashST<Key, Value> {
     }
     public Ex02_AlternateSeparateChainingHashST(int M){
         this.M = M;
+        // I am confused with this question of "directly uses the linked-list code from SequentialSearchST"
         st = (Ex02_AlternateSeparateChainingHashST<Key, Value>[]) new Ex02_AlternateSeparateChainingHashST[M];
         for (int i = 0; i < M; i++){
             st[i] = new Ex02_AlternateSeparateChainingHashST<>(M);
