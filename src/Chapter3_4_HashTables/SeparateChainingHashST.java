@@ -34,14 +34,19 @@ public class SeparateChainingHashST<Key, Value> {
     }
 
     public static void main(String[] args) {
-        SeparateChainingHashST<String, Integer> stringIntegerSeparateChainingHashST = new SeparateChainingHashST<>();
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("S"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("S"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("E"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("A"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("R"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("C"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("H"));
-        StdOut.println(stringIntegerSeparateChainingHashST.hash("E"));
+        SeparateChainingHashST<String, Integer> integerSeparateChainingHashST = new SeparateChainingHashST<>();
+        StdOut.println(integerSeparateChainingHashST.hash("S"));
+        StdOut.println(integerSeparateChainingHashST.hash("S"));
+        StdOut.println(integerSeparateChainingHashST.hash("E"));
+        StdOut.println(integerSeparateChainingHashST.hash("A"));
+        StdOut.println(integerSeparateChainingHashST.hash("R"));
+        StdOut.println(integerSeparateChainingHashST.hash("C"));
+        StdOut.println(integerSeparateChainingHashST.hash("H"));
+        StdOut.println(integerSeparateChainingHashST.hash("E"));
+        integerSeparateChainingHashST.put("S", 10);
+        integerSeparateChainingHashST.put("O", 10);
+        integerSeparateChainingHashST.put("R", 10);
+        integerSeparateChainingHashST.put("T", 10);
+        StdOut.println("\n" + integerSeparateChainingHashST.get("O"));
     }
 }
