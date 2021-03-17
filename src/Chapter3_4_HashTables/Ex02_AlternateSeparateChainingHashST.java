@@ -29,7 +29,7 @@ public class Ex02_AlternateSeparateChainingHashST<Key, Value> {
     }*/
     private SequentialSearchST<Key, Value>[] st;
     public Ex02_AlternateSeparateChainingHashST(){
-        this(5);
+        this(997);
     }
     public Ex02_AlternateSeparateChainingHashST(int M){
         this.M = M;
@@ -50,12 +50,8 @@ public class Ex02_AlternateSeparateChainingHashST<Key, Value> {
     }
     public Value get(Key key){
         if (key == null){throw new IllegalArgumentException("Argument cannot be empty");}
-        for (SequentialSearchST.Node x = st[hash(key)].first; x != null; x = x.next){
-            if (key.equals(x.key)){
-                return (Value) x.value;
-            }
-        }
-        return null;
+        int i = hash(key);
+        return st[i].get(key);
     }
     public void put(Key key, Value value){
         if (key == null){throw new IllegalArgumentException("Argument key cannot be empty");}
@@ -64,18 +60,18 @@ public class Ex02_AlternateSeparateChainingHashST<Key, Value> {
             return;
         }
         if (N >= M * 10){resize(M * 2);}
-        for (SequentialSearchST.Node x = st[hash(key)].first; x != null; x = x.next){
+       /* for (SequentialSearchST.Node x = st[hash(key)].first; x != null; x = x.next){
             if (key.equals(x.key)){
                 x.value = value;
                 N++;
                 return;
             }
-        }
-        /*int i = hash(key);
+        }*/
+        int i = hash(key);
         if (!st[i].contains(key)){
             N++;
             st[i].put(key, value);
-        }*/
+        }
     }
     public void resize(int newSize){
         Ex02_AlternateSeparateChainingHashST<Key, Value> temp = new Ex02_AlternateSeparateChainingHashST<>(newSize);
@@ -111,7 +107,7 @@ public class Ex02_AlternateSeparateChainingHashST<Key, Value> {
 
     public static void main(String[] args) {
         Ex02_AlternateSeparateChainingHashST<String, Integer> alternateSeparateChainingHashST = new Ex02_AlternateSeparateChainingHashST<>();
-       /* alternateSeparateChainingHashST.put("S",0);
+        /*alternateSeparateChainingHashST.put("S",0);
         alternateSeparateChainingHashST.put("E",1);
         alternateSeparateChainingHashST.put("A",2);*/
         for (int i = 0; !StdIn.isEmpty(); i++){
