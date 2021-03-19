@@ -10,10 +10,12 @@ public class SequentialSearchST<Key, Value> {
         public Node next;
         public Value value;
         public Key key;
-        public Node(Node next, Value val, Key key){
+        public int countOfEntries;
+        public Node(Node next, Value val, Key key, int countOfEntries){
             this.next = next;
             this.value = val;
             this.key = key;
+            this.countOfEntries = countOfEntries;
         }
     }
     public Value get(Key key){
@@ -37,9 +39,11 @@ public class SequentialSearchST<Key, Value> {
                 return;
             }
         }
-        first = new Node(first, val, key);
+        first = new Node(first, val, key, 0);
+        first.countOfEntries = first.countOfEntries + 1;
         n++;
     }
+
     public boolean isEmpty(){return n == 0;}
     public int size(){return n;}
     public boolean contains(Key key){
