@@ -53,10 +53,10 @@ public class Ex03_DeleteSomeKeysWithIntegerField<Key, Value> {
                 }
             }
             first = new Node(first, val, key, 0);
+            first = first.next;
             first.countOfEntries = first.countOfEntries + 1;
             n++;
         }
-
         public boolean isEmpty(){return n == 0;}
         public int size(){return n;}
         public boolean contains(Key key){
@@ -91,7 +91,7 @@ public class Ex03_DeleteSomeKeysWithIntegerField<Key, Value> {
     private int m;
     private SequentialSearchST<Key, Value>[] st;
     public Ex03_DeleteSomeKeysWithIntegerField(){
-        this(97);
+        this(15);
     }
     public Ex03_DeleteSomeKeysWithIntegerField(int m){
         this.m = m;
@@ -123,12 +123,9 @@ public class Ex03_DeleteSomeKeysWithIntegerField<Key, Value> {
             delete(key);
             return;
         }
-        if (n == m / 2){resize(m * 2);}
+        if (n >= 10 * m){resize(m * 2);}
         int i = hash(key);
-        if (st[i].contains(key)){
-            st[i].put(key, value);
-        }
-        else {
+        if (!st[i].contains(key)){
             st[i].put(key, value);
             n++;
         }
@@ -151,11 +148,17 @@ public class Ex03_DeleteSomeKeysWithIntegerField<Key, Value> {
     public void deleteKeyGreaterThanK(int k){
         for (int i = 0; i < m; i++){
             if (!st[i].isEmpty()){
+                if (st[i].first.countOfEntries > 5){
+                    st[i].first.key = null;
+                    st[i].first.value = null;
+                }
                 SequentialSearchST.Node node = st[i].first;
+
                 while (node != null){
                     if (node.countOfEntries > k){
-                        node = node.next;
+                        st[i].first = st[i].first.next;
                     }
+                    node = node.next;
                 }
             }
         }
@@ -172,16 +175,29 @@ public class Ex03_DeleteSomeKeysWithIntegerField<Key, Value> {
 
     public static void main(String[] args) {
         Ex03_DeleteSomeKeysWithIntegerField<String, Integer> deleteSomeKeys = new Ex03_DeleteSomeKeysWithIntegerField<>();
-        for (int i = 0; !StdIn.isEmpty(); i++){
+        /*for (int i = 0; !StdIn.isEmpty(); i++){
             String s = StdIn.readString();
             deleteSomeKeys.put(s, i);
-        }
+        }*/
+        deleteSomeKeys.put("S", 1);
+        deleteSomeKeys.put("E", 2);
+        deleteSomeKeys.put("A", 3);
+        deleteSomeKeys.put("R", 4);
+        deleteSomeKeys.put("C", 5);
+        deleteSomeKeys.put("H", 6);
+        deleteSomeKeys.put("E", 7);
+        deleteSomeKeys.put("X", 8);
+        deleteSomeKeys.put("A", 9);
+        deleteSomeKeys.put("M", 10);
+        deleteSomeKeys.put("P", 11);
+        deleteSomeKeys.put("L", 12);
+        StdOut.println("Hash value: " + deleteSomeKeys.hash("L"));
         for(int i = 0; i < deleteSomeKeys.m; i++){
             for (String s : deleteSomeKeys.st[i].keys()){
                 StdOut.println(s + " " + deleteSomeKeys.hash(s) + " " + deleteSomeKeys.st[i].first.countOfEntries);
             }
         }
-        deleteSomeKeys.deleteKeyGreaterThanK(1);
+        deleteSomeKeys.deleteKeyGreaterThanK(5);
         for(int i = 0; i < deleteSomeKeys.m; i++){
             for (String s : deleteSomeKeys.st[i].keys()){
                 StdOut.println(s + " " + deleteSomeKeys.hash(s));
