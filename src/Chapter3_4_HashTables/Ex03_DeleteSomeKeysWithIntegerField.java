@@ -1,7 +1,6 @@
 package Chapter3_4_HashTables;
 
 import edu.princeton.cs.algs4.Queue;
-import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /*
