@@ -13,6 +13,8 @@ public class Ex06_ProveDifferenceOfTBitIntegers {
             1001(9)     %5 = 4
             1010(10)    %5 = 0
             1100(12)    %5 = 2
-              
+            1101(13)    %5 = 3 (its hash value equals to 8)
+            1111(15)    %5 = 0 (its hash value equals to 10)
+
     * */
 }
