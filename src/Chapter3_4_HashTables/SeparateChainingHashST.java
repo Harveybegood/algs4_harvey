@@ -10,8 +10,8 @@ public class SeparateChainingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
     private int n;                                // number of key-value pairs
-    private int m;                                // hash table size
-    private SequentialSearchST<Key, Value>[] st;  // array of linked-list symbol tables
+    public int m;                                // hash table size
+    public SequentialSearchST<Key, Value>[] st;  // array of linked-list symbol tables
 
 
     /**
@@ -123,7 +123,7 @@ public class SeparateChainingHashST<Key, Value> {
         }
 
         // double table size if average length of list >= 10
-        if (n >= 10*m) resize(2*m);
+        if (n >= 2*m) resize(2*m);
 
         int i = hash(key);
         if (!st[i].contains(key)) n++;
