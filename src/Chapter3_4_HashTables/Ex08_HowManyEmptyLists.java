@@ -29,10 +29,10 @@ public class Ex08_HowManyEmptyLists {
     public int emptyLists(int n){
         int count  = 0;
         SeparateChainingHashST<Integer, Integer> separateChainingHashST = new SeparateChainingHashST<>();
-        for (int i = 0; i < separateChainingHashST.size(); i++){
+        for (int i = 0; i < n; i++){
             separateChainingHashST.put(StdRandom.uniform(i, n), i);
         }
-        for (int i = 0; i < separateChainingHashST.size(); i++){
+        for (int i = 0; i < separateChainingHashST.m; i++){
             if (separateChainingHashST.st[i].first == null){
                 count++;
             }
