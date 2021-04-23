@@ -19,6 +19,7 @@ public class Ex10_InsertKeysWithLinearProbing<Key, Value> {
         keys = (Key[]) new Object[M];
         values = (Value[]) new Object[M];
     }
+    public Ex10_InsertKeysWithLinearProbing(){}
     // M that will be initialized in the phase of constructing ADT;
     public int hash(Key key){
         return 11 * key.hashCode() % M;
