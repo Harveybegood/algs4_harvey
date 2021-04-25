@@ -30,21 +30,37 @@ public class Ex11_GiveResultsHashTableM4 extends Ex10_InsertKeysWithLinearProbin
 
     /*
     *   0 null
-        1 S
+        1 null
         2 null
-        3 Y
-        4 I
+        3 I
+        4 null
         5 O
         6 null
         7 U
-        8 E
+        8 null
         9 null
-        10 N
+        10 null
         11 A
-        12 Q
-        13 T
+        12 null
+        13 null
         14 null
         15 null
+        16 null
+        17 S
+        18 null
+        19 Y
+        20 null
+        21 null
+        22 null
+        23 E
+        24 null
+        25 null
+        26 N
+        27 Q
+        28 T
+        29 null
+        30 null
+        31 null
     */
 
 }
