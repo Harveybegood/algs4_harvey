@@ -35,7 +35,7 @@ public class Ex10_InsertKeysWithLinearProbing<Key, Value> {
     }
     public void put(Key key, Value value){
         if (key == null || value == null){throw new IllegalArgumentException("Argument key cannot be null");}
-        if (n > 0.75 * M){resize(2 * M);}
+        if (n > 0.5 * M){resize(2 * M);}
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % M){
             if (keys[i].equals(key)){
