@@ -6,21 +6,33 @@ package Chapter3_4_HashTables;
 * */
 public class Ex15_HowManyCompares {
     /*
-    *       key     hash        0   1   2   3   4   5   6   7   8   9           Compares
-    *       A       0           A                                                   0
-    *       B       0               B                                               1
-    *       C       0                   C                                           2
-    *       D       0                       D                                       3
+            before array resizing
+    *       key     hash        0   1   2   3   4 ... n/2 - 2  n/2 - 1 ...  n                  Compares
+    *       A       0           A                                                               0
+    *       B       0               B                                                           1
+    *       C       0                   C                                                       2
+    *       D       0                       D                                                   3
     *
     *       ..................................................................
     *
-    *       X       0                                                       X      n-3
-    *       Y       0                                                              n-2
-    *       Z       0                                                              n-1
-    *                                                                            (n * (0 + n-1))/2 = n^2/2
+    *       P       0                                   P                                (n/2)-2
+    *       the number of keys reach to half full of the hash table
+    *       Q       0                                          Q                         (n/2)-1
+    *                                                                            (n/2 * (0 + (n/2)-1))/2 ~ n^2/8
+    *
+    *       after array resizing
     *                                                                            and then calculating the compares for resizing
-    *                                                                            there is just double previous one
-    *                                                                            n ^ 2 / 2 * 2 = n^2
+    *                                                                            which requires rehashing table n/2: n^2/8
+    *
+    *
+    *       key     hash        0   1   2   3   4 ... n/2 - 2  n/2 - 1 n/2 ... n   n + 1   n + 2  ...  2n
+    *       X       0                                                   X
+    *
+    *       Z       0                                                          Z
+    *
+    *                                                                   (n * (n/2 + n))/2 ~ n^2/2
+    *
+    *                                                                   Total compares: 5n^2/8
     *
     *
     * */
