@@ -32,7 +32,7 @@ public class Ex08_HowManyEmptyLists {
         for (int i = 0; i < n; i++){
             separateChainingHashST.put(StdRandom.uniform(i, n), i);
         }
-        for (int i = 0; i < separateChainingHashST.m; i++){
+        for (int i = 0; i < separateChainingHashST.M; i++){
             if (separateChainingHashST.st[i].first == null){
                 count++;
             }

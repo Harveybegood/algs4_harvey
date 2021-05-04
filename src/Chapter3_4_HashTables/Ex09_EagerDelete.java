@@ -17,8 +17,8 @@ public class Ex09_EagerDelete<Key, Value> extends SeparateChainingHashST<Key, Va
         int i = hash(key);
         st[i].delete(key);
         n--;
-        if (n > 0 && n < m / 4){
-            resize(m / 2);
+        if (n > 0 && n < M / 4){
+            resize(M / 2);
         }
     }
 
