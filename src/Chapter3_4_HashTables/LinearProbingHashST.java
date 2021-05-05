@@ -1,18 +1,21 @@
 package Chapter3_4_HashTables;
+import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.StdOut;
 
 @SuppressWarnings("unchecked")
 public class LinearProbingHashST<Key, Value> {
+    private static final int INIT_CAP = 4;
     private int N;
-    private int M = 16;
+    private int M;
     private Key[] keys;
     private Value[] values;
     public LinearProbingHashST(){
-        keys = (Key[]) new Object[M];
-        values = (Value[]) new Object[M];
+        this(INIT_CAP);
     }
     public LinearProbingHashST(int cap){
-        keys = (Key[]) new Object[cap];
-        values = (Value[]) new Object[cap];
+        this.M = cap;
+        keys = (Key[]) new Object[M];
+        values = (Value[]) new Object[M];
     }
     private int hash(Key key){
         return (key.hashCode() & 0x7fffffff) % M;
@@ -31,7 +34,7 @@ public class LinearProbingHashST<Key, Value> {
     public void put(Key key, Value value){
         if (N >= M/2){resize(2 * M);}
         int i;
-        for (i = hash(key); keys[i] != null; i = (i+1)%M){
+        for (i = hash(key); keys[i] != null; i = (i+1) % M){
             if (keys[i].equals(key)){
                 values[i] = value;
                 return;
@@ -58,26 +61,36 @@ public class LinearProbingHashST<Key, Value> {
         }
         int i = hash(key);
         while (!key.equals(keys[i])){
-            i = (i + 1)%M;
+            i = (i + 1) % M;
         }
         keys[i] = null;
         values[i] = null;
-        i = (i + 1)%M;
+        i = (i + 1) % M;
         while (keys[i] != null){
             Key keyToRedo = keys[i];
             Value valueToRedo = values[i];
             N--;
             put(keyToRedo, valueToRedo);
-            i = (i + 1)%M;
+            i = (i + 1) % M;
         }
         N--;
         if (N > 0 && N == M/8){
             resize(M/2);
         }
     }
+    public Iterable<Key> keys(){
+        Queue<Key> queue = new Queue<>();
+        //LinearProbingHashST<Key, Value> linearProbingHashST = new LinearProbingHashST<>(M);
+        for (int i = 0; i < M; i++){
+            if (keys[i] != null){
+                queue.enqueue(keys[i]);
+            }
+        }
+        return queue;
+    }
 
     public static void main(String[] args) {
-        LinearProbingHashST<String, Integer> linearProbingHashST = new LinearProbingHashST<>(2);
+        LinearProbingHashST<String, Integer> linearProbingHashST = new LinearProbingHashST<>();
         linearProbingHashST.put("S", 0);
         linearProbingHashST.put("E", 1);
         linearProbingHashST.put("A", 2);
@@ -91,6 +104,8 @@ public class LinearProbingHashST<Key, Value> {
         linearProbingHashST.put("P", 10);
         linearProbingHashST.put("L", 11);
         linearProbingHashST.put("E", 12);
-
+        for (String s : linearProbingHashST.keys()){
+            StdOut.println(s + " - " + linearProbingHashST.get(s));
+        }
     }
 }
