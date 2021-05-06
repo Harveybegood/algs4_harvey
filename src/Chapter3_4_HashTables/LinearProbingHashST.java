@@ -89,6 +89,27 @@ public class LinearProbingHashST<Key, Value> {
         return queue;
     }
 
+    // Computes the average cost of a search hit in a table. assuming that each key in the table is equally likely to be sought
+    // We shall do the search hit for each key, the way of which simulates the action of get and then add the number of
+    // search hit of each key, then divide the number of key-value pair N
+    public double averageCostOfSearchHit(){
+        double averageCost = 0;
+        for (Key key : keys()){
+            int countSearchHit = 0;
+            for (int i = hash(key); keys[i] != null; i = (i + 1) % M){
+                if (keys[i].equals(key)){
+                    countSearchHit++;
+                }
+                else {
+                    countSearchHit++;
+                }
+            }
+            averageCost += (1.0) * countSearchHit / N;
+
+        }
+        return averageCost;
+    }
+
     public static void main(String[] args) {
         LinearProbingHashST<String, Integer> linearProbingHashST = new LinearProbingHashST<>();
         linearProbingHashST.put("S", 0);
