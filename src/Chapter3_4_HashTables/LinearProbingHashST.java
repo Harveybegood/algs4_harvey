@@ -110,6 +110,25 @@ public class LinearProbingHashST<Key, Value> {
         return averageCost;
     }
 
+    public double averageCostOfSearchMiss(){
+        double averageCost = 0;
+        for (Key key : keys()){
+            int countSearchMiss = 0;
+            for (int i = hash(key); keys[i] != null; i = (i + 1) % M){
+                if (keys[i].equals(key)){
+                    countSearchMiss++;
+                }
+                else {
+                    countSearchMiss++;
+                }
+            }
+            // add one more while probing process reaches to the null entry
+            countSearchMiss++;
+            averageCost += (1.0) * countSearchMiss / N;
+        }
+        return averageCost;
+    }
+
     public static void main(String[] args) {
         LinearProbingHashST<String, Integer> linearProbingHashST = new LinearProbingHashST<>();
         linearProbingHashST.put("S", 0);
