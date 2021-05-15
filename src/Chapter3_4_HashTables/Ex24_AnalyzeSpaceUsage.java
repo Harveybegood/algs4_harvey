@@ -39,11 +39,15 @@ public class Ex24_AnalyzeSpaceUsage {
     }
     /*
     *   SeparateChaining: object overhead(16)
-    *                     + array object overhead(16)
-    *                     +
-    *   + M objects to SequentialSearchST:   M * object overhead(16)
-    *                                        + reference to Node first(8)
-    *                                        + N * ((object Node overhead(16)
+    *                     + st array object overhead(16)
+    *                     + st array length(4)
+    *                     + padding(4)
+    *                     + M * reference to st array(8)
+    *
+    *              + M objects to SequentialSearchST: M * (object overhead(16)
+    *                                        + reference to Node first(8))
+    *
+    *                       + N * ((object Node overhead(16)
     *                                        + inner class(8)
     *                                        + reference to double(8)
     *                                        + reference to value(8)
@@ -51,7 +55,7 @@ public class Ex24_AnalyzeSpaceUsage {
     *   + int M(4)
     *   + int n(4)
     *
-    *
+    *   =
     *
     * */
     // space usage of linear probing
@@ -62,6 +66,7 @@ public class Ex24_AnalyzeSpaceUsage {
         Value[] values = (Value[]) new Object[M];
         public LinearProbing(int M){
             for (int i = 0; i < M; i++){
+
                 keys[i] = null;
                 values[i] = null;
             }
@@ -69,17 +74,17 @@ public class Ex24_AnalyzeSpaceUsage {
     }
     /*
     *   LinearProbing objects: 16
-    *   + N double keys[]: array object overhead(16)
-    *                   + record array length(4)
-    *                   + padding(4)
-    *                   + n double keys(8 * n)
-    *                   = 24 + 8*n
+    *       + N double keys[]: array object overhead(16)
+    *                         + record array length(4)
+    *                         + padding(4)
+    *                         + n double keys(8 * n)
+    *                         = 24 + 8*n
     *
-    *   + N values[]: 24 + 8 * n
+    *       + N values[]: 24 + 8 * n
     *   + int M(4)
     *   + int n(4)
     *
-    *
+    *   =
     *
     * */
 
@@ -113,7 +118,7 @@ public class Ex24_AnalyzeSpaceUsage {
     *
     *   + reference to Node root(8)
     *
-    *
+    *   =
     *
     * */
 }
