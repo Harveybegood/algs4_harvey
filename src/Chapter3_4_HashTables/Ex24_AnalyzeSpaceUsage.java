@@ -113,6 +113,7 @@ public class Ex24_AnalyzeSpaceUsage {
     *       + reference to node right(8)
     *       + reference to key(double)(8)
     *       + reference to value (8)
+    *       + inner class (8)
     *       + int numberOfSubTree(4)
     *       + padding (4)
     *
