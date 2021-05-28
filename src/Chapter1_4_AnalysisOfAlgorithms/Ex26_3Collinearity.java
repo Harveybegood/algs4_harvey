@@ -45,7 +45,7 @@ public class Ex26_3Collinearity {
     public static void main(String[] args) {
         Ex26_3Collinearity collinearity = new Ex26_3Collinearity();
         int numberOfTriples = collinearity.countTriplesBasedOnSlope(50);
-        StdOut.println("The number of triples on the same line: " + numberOfTriples);
+        StdOut.println("The number of triples fall on the same line: " + numberOfTriples);
     }
 
     /*
