@@ -30,16 +30,18 @@ public class Ex28_DoubleHashing<Key, Value> {
         }
     }
     public int hash1(Key key){
-        return (11 * key.hashCode() & 0x7fffffff) % M;
+        return (13 * key.hashCode()) % M;
     }
     // if a collision encounters then a second hash function hash2 will be taken effective to avoid the collision and
     // find a proper position for the new key
     public int hash2(Key key){
-        return (17 * key.hashCode() & 0x7fffffff) % M;
+        return (17 * key.hashCode()) % M;
     }
     public int hash(Key key){
         increment++;
-        return (hash2(key) + increment * hash1(key)) % M;
+        int hash = (hash2(key) + increment * hash1(key)) % M;
+        hash = hash != 0 ? hash : 1;
+        return hash;
     }
     public boolean isEmpty(){return n == 0;}
     public int size(){return n;}
@@ -67,9 +69,10 @@ public class Ex28_DoubleHashing<Key, Value> {
         if (value == null){throw new IllegalArgumentException("Argument cannot be null");}
         int i;
         for (i = hash1(key); keys[i] != null; i = hash(key)){
-            StdOut.println("Hash value for: " + i);
+            StdOut.println("Hash value while collision: " + i);
             if (keys[i].equals(key)){
                 values[i] = value;
+                return;
             }
         }
         keys[i] = key;
@@ -102,7 +105,9 @@ public class Ex28_DoubleHashing<Key, Value> {
         doubleHashing.put("I", 8);
         doubleHashing.put("O", 9);
         doubleHashing.put("N", 10);
-
+        for (String s : doubleHashing.keys()){
+            StdOut.println(s + " " + doubleHashing.get(s));
+        }
     }
 }
 
