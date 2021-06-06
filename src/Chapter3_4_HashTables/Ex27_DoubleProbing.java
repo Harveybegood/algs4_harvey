@@ -18,7 +18,6 @@ public class Ex27_DoubleProbing<Key, Value> {
     *
     *   E       0       11 69 % 3 = 0            17 69 % 3 = 0
         X       1       11 88 % 3 = 2            17 88 % 3 = 2
-        Two hash functions which come to same index value, which means it is not able to pick the shorter lists
     *
     * */
     private int M;
@@ -48,9 +47,14 @@ public class Ex27_DoubleProbing<Key, Value> {
     }
     public Value get(Key key){
         if (key == null){throw new IllegalArgumentException("Argument key cannot be null");}
-        int i = hash1(key);
-        //if (!isContains(key)){return null;}
-        return st[i].get(key);
+        Value v1 = st[hash1(key)].get(key);
+        Value v2 = st[hash2(key)].get(key);
+        if (v1 == null){
+            return v2;
+        }
+        else {
+            return v1;
+        }
     }
     public void put(Key key, Value value){
         if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
@@ -87,7 +91,7 @@ public class Ex27_DoubleProbing<Key, Value> {
         return queue;
     }
     // Method delete() will be written on Ex29
-    public void delete(Key key){}
+   /* public void delete(Key key){}*/
     public static void main(String[] args) {
         Ex27_DoubleProbing<String, Integer> doubleProbing = new Ex27_DoubleProbing<>();
         doubleProbing.put("E", 0);
