@@ -79,9 +79,9 @@ public class Ex28_DoubleHashing<Key, Value> {
         values[i] = value;
         n++;
     }
-    public void delete(Key key){
+    /*public void delete(Key key){
         // delete function left to in the next exercise 29
-    }
+    }*/
     public Iterable<Key> keys(){
         Queue<Key> queue = new Queue<>();
         for (int i = 0; i < M; i++){
