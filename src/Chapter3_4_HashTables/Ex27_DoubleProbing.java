@@ -14,18 +14,11 @@ import edu.princeton.cs.algs4.StdOut;
 @SuppressWarnings("unchecked")
 public class Ex27_DoubleProbing<Key, Value> {
     /*
-    *   Key   Value   hash (11 K % M(3))     st[]
+    *   Key   Value   hash (11 K % M(3))      hash (17 K % M(3))            st[]
     *
-    *   E       0       11 0 % 3 = 3        st[0] -> Y|3 -> T|6 -> N|9
-    *   A       1       11 1 % 3 = 2        st[1] -> S|2 -> U|5 -> O|8
-    *   S       2       11 2 % 3 = 1        st[2] -> A|1 -> Q|4 -> I|7
-    *   Y       3       11 3 % 3 = 0        st[3] -> E|0
-    *   Q       4       11 4 % 3 = 2
-    *   U       5       11 5 % 3 = 1
-    *   T       6       11 6 % 3 = 0
-    *   I       7       11 7 % 3 = 2
-    *   O       8       11 8 % 3 = 1
-    *   N       9       11 9 % 3 = 0
+    *   E       0       11 69 % 3 = 0            17 69 % 3 = 0
+        X       1       11 88 % 3 = 2            17 88 % 3 = 2
+        Two hash functions which come to same index value, which means it is not able to pick the shorter lists
     *
     * */
     private int M;
@@ -62,7 +55,7 @@ public class Ex27_DoubleProbing<Key, Value> {
     public void put(Key key, Value value){
         if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
         if (value == null){throw new IllegalArgumentException("Argument cannot be null");}
-        if (n >= M / 2){resize(2 * M);}
+        if (n > M / 2){resize(2 * M);}
         int firstHash = hash1(key);
         int secondHash = hash2(key);
         int lengthOfLink1 = st[firstHash].size();
