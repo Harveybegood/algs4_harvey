@@ -20,8 +20,8 @@ public class Ex27_DoubleProbing<Key, Value> {
         X       1       11 88 % 3 = 2            17 88 % 3 = 2
     *
     * */
-    private int M;
-    private int n;
+    public int M;
+    public int n;
     public SequentialSearchST<Key, Value>[] st;
     public Ex27_DoubleProbing(){
         this(3);
@@ -85,7 +85,9 @@ public class Ex27_DoubleProbing<Key, Value> {
         Queue<Key> queue = new Queue<>();
         for (int i = 0; i < M; i++){
             for (Key key : st[i].keys()){
-                queue.enqueue(key);
+                if (key != null){
+                    queue.enqueue(key);
+                }
             }
         }
         return queue;
