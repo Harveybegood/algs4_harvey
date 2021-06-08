@@ -13,10 +13,10 @@ import edu.princeton.cs.algs4.StdOut;
 * */
 @SuppressWarnings("unchecked")
 public class Ex28_DoubleHashing<Key, Value> {
-    private int M;
-    private int n;
-    private Key[] keys;
-    private Value[] values;
+    public int M;
+    public int n;
+    public Key[] keys;
+    public Value[] values;
     private int increment = 0;
     public Ex28_DoubleHashing(){
         this(11);
@@ -78,6 +78,17 @@ public class Ex28_DoubleHashing<Key, Value> {
         keys[i] = key;
         values[i] = value;
         n++;
+    }
+    public void resize(int newSize){
+        Ex28_DoubleHashing<Key, Value> temp = new Ex28_DoubleHashing<>(newSize);
+        for (int i = 0; i < M; i++){
+            if (keys[i] != null){
+                temp.put(keys[i], values[i]);
+            }
+        }
+        this.keys = temp.keys;
+        this.values = temp.values;
+        this.M = temp.M;
     }
     /*public void delete(Key key){
         // delete function left to in the next exercise 29
