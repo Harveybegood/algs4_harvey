@@ -74,7 +74,9 @@ public class Ex27_DoubleProbing<Key, Value> {
         Ex27_DoubleProbing<Key, Value> temp = new Ex27_DoubleProbing<>(newSize);
         for (int i = 0; i < M; i++){
             for (Key key : st[i].keys()){
-                temp.put(key, st[i].get(key));
+                if (key != null){
+                    temp.put(key, st[i].get(key));
+                }
             }
         }
         this.st = temp.st;
