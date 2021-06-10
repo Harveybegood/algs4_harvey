@@ -1,4 +1,4 @@
-package Chapter1_4AnalysisOfAlgorithms;
+package Chapter1_4_AnalysisOfAlgorithms;
 
 import edu.princeton.cs.algs4.StdOut;
 
@@ -15,7 +15,7 @@ public class Steque<Item> {
         Item item;
         Node next;
     }
-    private Node first;
+    public Node first;
     private Node last;
     private int n;
     public boolean isEmpty(){return n == 0;}

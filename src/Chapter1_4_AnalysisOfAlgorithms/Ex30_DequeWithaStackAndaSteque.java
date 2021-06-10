@@ -1,9 +1,8 @@
-package Chapter1_4AnalysisOfAlgorithms;
 
+package Chapter1_4_AnalysisOfAlgorithms;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.awt.event.ItemEvent;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 /*
@@ -55,7 +54,7 @@ public class Ex30_DequeWithaStackAndaSteque<Item> implements Iterable<Item>{
         return new DequeIterator();
     }
     private class DequeIterator implements Iterator<Item>{
-        Steque.Node current = steque.first;
+        Chapter1_4_AnalysisOfAlgorithms.Steque.Node current = steque.first;
         public boolean hasNext(){return current != null;}
         public Item next(){
             Item item = (Item) current.item;
