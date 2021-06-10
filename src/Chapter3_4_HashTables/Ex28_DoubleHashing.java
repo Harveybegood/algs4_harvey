@@ -52,6 +52,11 @@ public class Ex28_DoubleHashing<Key, Value> {
                 return values[i];
             }
         }
+        for (int j = hash(key); keys[j] != null; j = (j + 1) % M){
+            if (key.equals(keys[j])){
+                return values[j];
+            }
+        }
         return null;
     }
     public boolean isContains(Key key){
@@ -67,6 +72,9 @@ public class Ex28_DoubleHashing<Key, Value> {
         // }
         // in my view, argument is null, which would be using to tell user or programming the parameter that cannot be left out.
         if (value == null){throw new IllegalArgumentException("Argument cannot be null");}
+        if (n >= M / 2){
+            resize(2 * M);
+        }
         int i;
         for (i = hash1(key); keys[i] != null; i = hash(key)){
             StdOut.println("Hash value while collision: " + i);
