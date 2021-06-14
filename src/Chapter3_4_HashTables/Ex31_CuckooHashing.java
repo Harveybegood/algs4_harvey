@@ -55,10 +55,12 @@ public class Ex31_CuckooHashing<Key, Value> {
 
         if (keys1[hash1(key)] != null && keys1[hash1(key)].equals(key)){
             values1[hash1(key)] = value;
+            StdOut.println(keys1[hash1(key)] + " is duplicated.");
             return;
         }
         if (keys2[hash2(key)] != null &&keys2[hash2(key)].equals(key)){
             values2[hash2(key)] = value;
+            StdOut.println(keys1[hash2(key)] + " is duplicated.");
             return;
         }
 
@@ -115,6 +117,7 @@ public class Ex31_CuckooHashing<Key, Value> {
             this.MTable1 = temp.MTable1;
             this.NTable1 = temp.NTable1;
             this.keys1 = temp.keys1;
+            this.values1 = temp.values1;
         }
         if (NTable2 >= (MTable2 / 2)){
             for (int i = 0; i < MTable2; i++){
@@ -125,6 +128,7 @@ public class Ex31_CuckooHashing<Key, Value> {
             this.MTable2 = temp.MTable2;
             this.NTable2 = temp.NTable2;
             this.keys2 = temp.keys2;
+            this.values2 = temp.values2;
         }
     }
     public Value get(Key key){
@@ -180,10 +184,10 @@ public class Ex31_CuckooHashing<Key, Value> {
 
     public static void main(String[] args) {
         Ex31_CuckooHashing<String, Integer> cuckooHashing = new Ex31_CuckooHashing<>();
-        /*for (int i = 0; i < 10; i++){
-            cuckooHashing.put(StdRandom.uniform(1, 10) + "E", StdRandom.uniform(1, 50));
-        }*/
-        cuckooHashing.put("E", 0);
+        for (int i = 0; i < 30; i++){
+            cuckooHashing.put(StdRandom.uniform(1, 20) + "E", StdRandom.uniform(1, 50));
+        }
+       /* cuckooHashing.put("E", 0);
         cuckooHashing.put("X", 1);
         cuckooHashing.put("A", 2);
         cuckooHashing.put("M", 3);
@@ -193,8 +197,19 @@ public class Ex31_CuckooHashing<Key, Value> {
         cuckooHashing.put("U", 7);
         cuckooHashing.put("I", 8);
         cuckooHashing.put("O", 9);
-        cuckooHashing.put("N", 10);
+        cuckooHashing.put("N", 10);*/
         StdOut.println("All items in the table");
+        for (String s : cuckooHashing.keys()){
+            StdOut.println(s + " " + cuckooHashing.get(s));
+        }
+        StdOut.println("Implementation of deleting items");
+        for (String s : cuckooHashing.keys()){
+            Integer item = Integer.parseInt(s.substring(0, 1));
+            if ((item % 2) == 0){
+                StdOut.println("Deleting " + s);
+                cuckooHashing.delete(s);
+            }
+        }
         for (String s : cuckooHashing.keys()){
             StdOut.println(s + " " + cuckooHashing.get(s));
         }
