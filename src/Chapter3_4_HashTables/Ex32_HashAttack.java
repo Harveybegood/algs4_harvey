@@ -77,4 +77,14 @@ public class Ex32_HashAttack {
         hashAttack.findStringWithSameHashCodeValue(hashAttack);
 
     }
+
+    /*
+        This solution is in https://algs4.cs.princeton.edu/34hash/
+        It looks like I am confused with the question of what the exercise is asking
+
+    * Solution. It is easy to verify that "Aa" and "BB" hash to the same hashCode() value (2112). Now, any string of
+    * length 2N that is formed by concatenating these two strings together in any order (e.g., BBBBBB, AaAaAa, BBAaBB, AaBBBB)
+    * will hash to the same value. Here is a list of 10000 strings with the same hash value.
+    *
+    * */
 }
