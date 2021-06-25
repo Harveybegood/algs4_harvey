@@ -69,7 +69,7 @@ public class LinearProbingHashST<Key, Value> {
         while (keys[i] != null){
             Key keyToRedo = keys[i];
             Value valueToRedo = values[i];
-            N--;
+            //N--;
             put(keyToRedo, valueToRedo);
             i = (i + 1) % M;
         }
