@@ -18,7 +18,7 @@ public class Ex34_HashCost {
     // the ratio of time required in SeparateChainingHashTable for between hash() and compareTo()
     private class SeparateChainingHashTableCostRatio<Key, Value>{
 
-        double[] timerCal1 = new double[2];
+        long[] timerCal1 = new long[2];
 
         private class SequentialSearchTable<Key, Value>{
             private class Node{
@@ -46,10 +46,10 @@ public class Ex34_HashCost {
                 for (Node x = first; x != null; x = x.next){
                     Stopwatch timer = new Stopwatch();
                     if (x.key.equals(key)){
+                        timerCal1[0] += timer.elapsedTime();
                         return x.value;
                     }
                     timerCal1[0] += timer.elapsedTime();
-
                 }
                 return null;
             }
@@ -60,6 +60,7 @@ public class Ex34_HashCost {
                     Stopwatch timer = new Stopwatch();
                     if (x.key.equals(key)){
                         x.value = value;
+                        timerCal1[0] += timer.elapsedTime();
                         return;
                     }
                     timerCal1[0] += timer.elapsedTime();
@@ -74,7 +75,6 @@ public class Ex34_HashCost {
                 for (Node x = first; x != null; x = x.next){
                     Stopwatch timer = new Stopwatch();
                     if (x.key.equals(key)){
-                        timerCal1[0] += timer.elapsedTime();
                         if (x.next != null){
                             x.key = x.next.key;
                             x.value = x.next.value;
@@ -86,6 +86,7 @@ public class Ex34_HashCost {
                         }
                         n--;
                     }
+                    timerCal1[0] += timer.elapsedTime();
                 }
             }
             public Iterable<Key> keys(){
@@ -110,6 +111,7 @@ public class Ex34_HashCost {
         public SeparateChainingHashTableCostRatio(int DEFAULT_NUMBER_OF_BUCKETS, int DEFAULT_AVERAGE_LIST_SIZE){
             this.M = DEFAULT_NUMBER_OF_BUCKETS;
             this.N = DEFAULT_AVERAGE_LIST_SIZE;
+            //timerCal1 = new Double[2];
             st = (SequentialSearchTable<Key, Value>[]) new SequentialSearchTable[M];
             for (int i = 0; i < M; i++){
                 st[i] = new SequentialSearchTable<>();
@@ -155,7 +157,9 @@ public class Ex34_HashCost {
             SeparateChainingHashTableCostRatio<Key, Value> temp = new SeparateChainingHashTableCostRatio<>(newSize, 5);
             for (int i = 0; i < M; i++){
                 for (Key key : st[i].keys()){
-                    temp.put(key, st[i].get(key));
+                    if (key != null){
+                        temp.put(key, st[i].get(key));
+                    }
                 }
             }
             this.M = temp.M;
@@ -164,6 +168,7 @@ public class Ex34_HashCost {
         }
         public void delete(Key key){
             if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
+            if (!isContains(key)){return;}
             Stopwatch timer = new Stopwatch();
             int i = hash(key);
             timerCal1[1] += timer.elapsedTime();
@@ -189,12 +194,13 @@ public class Ex34_HashCost {
 
     // the ratio of time required in LinearProbingHashTable for between hash() and compareTo()
     private class LinearProbingHashTableCostRatio<Key, Value>{
-        double[] timeCal = new double[2];
+        long[] timeCal = new long[2];
         private Key[] keys;
         private Value[] values;
         private int M;
         private int N;
         public LinearProbingHashTableCostRatio(int M){
+            //timeCal = new Double[2];
             this.M = M;
             keys = (Key[]) new Object[M];
             values = (Value[]) new Object[M];
@@ -202,7 +208,7 @@ public class Ex34_HashCost {
         public boolean isEmpty(){return N == 0;}
         public int size(){return N;}
         public int hash(Key key){
-            return (key.hashCode() & 0x7ffffff) / M;
+            return (key.hashCode() & 0x7fffffff) % M;
         }
         public boolean isContains(Key key){
             if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
@@ -219,6 +225,7 @@ public class Ex34_HashCost {
                     timeCal[0] += timer1.elapsedTime();
                     return values[i];
                 }
+                timeCal[0] += timer1.elapsedTime();
             }
             return null;
         }
@@ -236,6 +243,7 @@ public class Ex34_HashCost {
                     values[i] = value;
                     return;
                 }
+                timeCal[0] += timer1.elapsedTime();
             }
             keys[i] = key;
             values[i] = value;
@@ -244,7 +252,9 @@ public class Ex34_HashCost {
         public void resize(int newSize){
             LinearProbingHashTableCostRatio<Key, Value> temp = new LinearProbingHashTableCostRatio<>(10);
             for (int i = 0; i < M; i++){
-                temp.put(keys[i], values[i]);
+                if (keys[i] != null){
+                    temp.put(keys[i], values[i]);
+                }
             }
             this.M = temp.M;
             this.keys = temp.keys;
@@ -259,9 +269,13 @@ public class Ex34_HashCost {
             while (keys[i] != null){
                 Stopwatch timer1 = new Stopwatch();
                 if (!keys[i].equals(key)){
-                    timeCal[0] += timer1.elapsedTime();
                     i = (i + 1) % M;
                 }
+                else {
+                    timeCal[0] += timer1.elapsedTime();
+                    break;
+                }
+                timeCal[0] += timer1.elapsedTime();
             }
             keys[i] = null;
             values[i] = null;
@@ -291,22 +305,22 @@ public class Ex34_HashCost {
     public static void main(String[] args) {
         Ex34_HashCost hashCost = new Ex34_HashCost();
         SeparateChainingHashTableCostRatio<Integer, Integer> separateChainingHashTableCostRatioInteger = hashCost.new SeparateChainingHashTableCostRatio<>();
-        for (int i = 0; i < 100; i++){
-            separateChainingHashTableCostRatioInteger.put(StdRandom.uniform(1, 100), StdRandom.uniform(1, 100));
+        for (int i = 0; i < 20; i++){
+            separateChainingHashTableCostRatioInteger.put(StdRandom.uniform(0, 100), StdRandom.uniform(1, 100));
         }
         for (int i = 0; i < 20; i++){
             separateChainingHashTableCostRatioInteger.get(i);
         }
-        for (int i = 0; i < 20; i++){
+        for (int i = 1; i < 20; i++){
             separateChainingHashTableCostRatioInteger.delete(i);
         }
         double timeCompareToCostForTypeInteger = separateChainingHashTableCostRatioInteger.timerCal1[0];
         double timeHashCostForTypeInteger = separateChainingHashTableCostRatioInteger.timerCal1[1];
-        StdOut.println("The ratio of the time of Hash / CompareTo");
+        StdOut.print("The ratio of the time of Hash / CompareTo - ");
         StdOut.println(timeHashCostForTypeInteger / timeCompareToCostForTypeInteger);
         SeparateChainingHashTableCostRatio<Double, Integer> separateChainingHashTableCostRatioDouble = hashCost.new SeparateChainingHashTableCostRatio<>();
-        for (int i = 0; i < 100; i++){
-            separateChainingHashTableCostRatioDouble.put(StdRandom.uniform(1.0, 100.00), StdRandom.uniform(1, 100));
+        for (int i = 0; i < 20; i++){
+            separateChainingHashTableCostRatioDouble.put(StdRandom.uniform(0.0, 100.00), StdRandom.uniform(1, 100));
         }
         for (int i = 0; i < 20; i++){
             separateChainingHashTableCostRatioDouble.get((double)i);
@@ -316,11 +330,11 @@ public class Ex34_HashCost {
         }
         double timeCompareToCostForTypeDouble = separateChainingHashTableCostRatioDouble.timerCal1[0];
         double timeHashCostForTypeDouble = separateChainingHashTableCostRatioDouble.timerCal1[1];
-        StdOut.println("The ratio of the time of Hash / CompareTo");
+        StdOut.print("The ratio of the time of Hash / CompareTo - ");
         StdOut.println(timeHashCostForTypeDouble / timeCompareToCostForTypeDouble);
         SeparateChainingHashTableCostRatio<String, Integer> separateChainingHashTableCostRatioString = hashCost.new SeparateChainingHashTableCostRatio<>();
         for (int i = 0; i < 100; i++){
-            separateChainingHashTableCostRatioString.put(StdRandom.uniform(1.0, 100.00) + "", StdRandom.uniform(1, 100));
+            separateChainingHashTableCostRatioString.put(StdRandom.uniform(0, 100) + "", StdRandom.uniform(1, 100));
         }
         for (int i = 0; i < 20; i++){
             separateChainingHashTableCostRatioString.get(i + "");
@@ -330,11 +344,11 @@ public class Ex34_HashCost {
         }
         double timeCompareToCostForTypeString = separateChainingHashTableCostRatioString.timerCal1[0];
         double timeHashCostForTypeString = separateChainingHashTableCostRatioString.timerCal1[1];
-        StdOut.println("The ratio of the time Hash / CompareTO");
+        StdOut.print("The ratio of the time of Hash / CompareTo - ");
         StdOut.println(timeHashCostForTypeString / timeCompareToCostForTypeString);
-        LinearProbingHashTableCostRatio<Integer, Integer> linearProbingHashTableCostRatioInteger = hashCost.new LinearProbingHashTableCostRatio<>(10);
+        LinearProbingHashTableCostRatio<Integer, Integer> linearProbingHashTableCostRatioInteger = hashCost.new LinearProbingHashTableCostRatio<>(4);
         for (int i = 0; i < 100; i++){
-            linearProbingHashTableCostRatioInteger.put(StdRandom.uniform(1, 100), StdRandom.uniform(1, 100));
+            linearProbingHashTableCostRatioInteger.put(StdRandom.uniform(0, 100), StdRandom.uniform(1, 100));
         }
         for (int i = 0; i < 20; i++){
             linearProbingHashTableCostRatioInteger.get(i);
@@ -344,25 +358,29 @@ public class Ex34_HashCost {
         }
         double timeCompareToCostIntegerLinearProbing = linearProbingHashTableCostRatioInteger.timeCal[0];
         double timeHashCostIntegerLinearProbing = linearProbingHashTableCostRatioInteger.timeCal[1];
-        StdOut.println("The ratio of the time of Hash / CompareTo");
+        StdOut.print("The ratio of the time of Hash / CompareTo - ");
         StdOut.println(timeHashCostIntegerLinearProbing / timeCompareToCostIntegerLinearProbing);
-        LinearProbingHashTableCostRatio<Double, Integer> linearProbingHashTableCostRatioDouble = hashCost.new LinearProbingHashTableCostRatio<>(10);
+        LinearProbingHashTableCostRatio<Double, Integer> linearProbingHashTableCostRatioDouble = hashCost.new LinearProbingHashTableCostRatio<>(4);
         for (int i = 0; i < 100; i++){
-            linearProbingHashTableCostRatioDouble.put(StdRandom.uniform(1.0, 100.00), StdRandom.uniform(1, 100));
+            linearProbingHashTableCostRatioDouble.put( StdRandom.uniform(0.0, 100.00), StdRandom.uniform(1, 100));
         }
         for (int i = 0; i < 20; i++){
-            linearProbingHashTableCostRatioDouble.get((double)i);
+            for (Double x : linearProbingHashTableCostRatioDouble.keys()){
+                linearProbingHashTableCostRatioDouble.get(x);
+            }
         }
         for (int i = 0; i < 20; i++){
-            linearProbingHashTableCostRatioDouble.delete((double)i);
+            for (Double x : linearProbingHashTableCostRatioDouble.keys()){
+                linearProbingHashTableCostRatioDouble.delete(x);
+            }
         }
         double timeCompareToCostDoubleLinearProbing = linearProbingHashTableCostRatioDouble.timeCal[0];
         double timeHashCostDoubleLinearProbing = linearProbingHashTableCostRatioDouble.timeCal[1];
-        StdOut.println("The ratio of the time of Hash / CompareTo");
+        StdOut.print("The ratio of the time of Hash / CompareTo - ");
         StdOut.println(timeHashCostDoubleLinearProbing / timeCompareToCostDoubleLinearProbing);
-        LinearProbingHashTableCostRatio<String, Integer> linearProbingHashTableCostRatioString = hashCost.new LinearProbingHashTableCostRatio<>(10);
+        LinearProbingHashTableCostRatio<String, Integer> linearProbingHashTableCostRatioString = hashCost.new LinearProbingHashTableCostRatio<>(4);
         for (int i = 0; i < 100; i++){
-            linearProbingHashTableCostRatioString.put(StdRandom.uniform(1.0, 100.00) + "", StdRandom.uniform(1, 100));
+            linearProbingHashTableCostRatioString.put(StdRandom.uniform(0, 100) + "", StdRandom.uniform(1, 100));
         }
         for (int i = 0; i < 20; i++){
             linearProbingHashTableCostRatioString.get(i + "");
@@ -372,7 +390,7 @@ public class Ex34_HashCost {
         }
         double timeCompareToCostStringLinearProbing = linearProbingHashTableCostRatioString.timeCal[0];
         double timeHashCostStringLinearProbing = linearProbingHashTableCostRatioString.timeCal[1];
-        StdOut.println("The ratio of the time of Hash / CompareTo");
+        StdOut.print("The ratio of the time of Hash / CompareTo - ");
         StdOut.println(timeHashCostStringLinearProbing / timeCompareToCostStringLinearProbing);
     }
 }
