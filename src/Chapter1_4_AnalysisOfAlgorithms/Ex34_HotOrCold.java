@@ -34,7 +34,7 @@ public class Ex34_HotOrCold<Item> {
         boolean hotter = currentGuessIsHotter(previousIndex, currentIndex, secretIntegerIndex);
         int middleIndex = previousIndex + (currentIndex - previousIndex) / 2;
         if (array[middleIndex] == array[secretIntegerIndex]){
-            return secretIntegerIndex;
+            return array[secretIntegerIndex];
         }
         // if current guess is hotter the secret number than the previous, replace the previous number to guess number which is an actual middle number
         if (hotter){
