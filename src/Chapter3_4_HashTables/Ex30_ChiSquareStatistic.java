@@ -1,7 +1,9 @@
 package Chapter3_4_HashTables;
 
 import Chapter3_1_SymbolTables.SequentialSearchST;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 
 /*
 *   Chi-square statistic. Add a method to SeparateChainingST to compute the X^2 statistic for the hash table. With N keys
@@ -16,6 +18,9 @@ public class Ex30_ChiSquareStatistic<Key, Value> extends Chapter3_4_HashTables.S
    /* private int M;
     private int N;*/
     //int M = new SeparateChainingHashST<>().M
+    public Ex30_ChiSquareStatistic(int initialSymbolTable, int averageList){
+        super(initialSymbolTable, averageList);
+    }
     private int[] numberKeys = new int[M];
     private double chiSquareStatistic(){
         double X;
@@ -36,8 +41,8 @@ public class Ex30_ChiSquareStatistic<Key, Value> extends Chapter3_4_HashTables.S
     }
 
     public static void main(String[] args) {
-        Ex30_ChiSquareStatistic<String, Integer> chiSquareStatistic = new Ex30_ChiSquareStatistic<>();
-        chiSquareStatistic.put("E", 0);
+        Ex30_ChiSquareStatistic<Integer, Integer> chiSquareStatistic = new Ex30_ChiSquareStatistic<>(10, 5);
+       /* chiSquareStatistic.put("E", 0);
         chiSquareStatistic.put("X", 1);
         chiSquareStatistic.put("A", 2);
         chiSquareStatistic.put("M", 3);
@@ -48,7 +53,10 @@ public class Ex30_ChiSquareStatistic<Key, Value> extends Chapter3_4_HashTables.S
         chiSquareStatistic.put("I", 8);
         chiSquareStatistic.put("O", 9);
         chiSquareStatistic.put("N", 10);
-        chiSquareStatistic.put("Y", 11);
+        chiSquareStatistic.put("Y", 11);*/
+        for (int i = 0; i < 50; i++){
+            chiSquareStatistic.put(StdRandom.uniform(1,200), i);
+        }
         double c = (double) chiSquareStatistic.n / chiSquareStatistic.M;
         double probability = 1 - (double)1/c;
         double lowerBound = (chiSquareStatistic.M - Math.sqrt(chiSquareStatistic.M));
