@@ -1,6 +1,5 @@
 package Chapter3_4_HashTables;
 
-import Chapter1_1_BasicProgrammingModel.Ex34;
 import edu.princeton.cs.algs4.*;
 
 /*
@@ -18,7 +17,7 @@ public class Ex34_HashCost {
     // the ratio of time required in SeparateChainingHashTable for between hash() and compareTo()
     private class SeparateChainingHashTableCostRatio<Key, Value>{
 
-        long[] timerCal1 = new long[2];
+        double[] timerCal1 = new double[2];
 
         private class SequentialSearchTable<Key, Value>{
             private class Node{
@@ -106,11 +105,11 @@ public class Ex34_HashCost {
         private int[] primes = {1, 1, 3, 7, 13, 31, 61, 127, 251, 509, 1021, 2039, 4093, 8191, 16381, 32749, 65521, 131071, 262139, 524287,
                 1048573, 2097143, 4194301, 8388593, 16777213, 33554393, 67108859, 134217689, 268435399, 536870909, 1073741789, 2147483647};
         public SeparateChainingHashTableCostRatio(){
-            this(10, DEFAULT_AVERAGE_LIST_SIZE);
+            this(10);
         }
-        public SeparateChainingHashTableCostRatio(int DEFAULT_NUMBER_OF_BUCKETS, int DEFAULT_AVERAGE_LIST_SIZE){
+        public SeparateChainingHashTableCostRatio(int DEFAULT_NUMBER_OF_BUCKETS){
             this.M = DEFAULT_NUMBER_OF_BUCKETS;
-            this.N = DEFAULT_AVERAGE_LIST_SIZE;
+            this.N = 0;
             //timerCal1 = new Double[2];
             st = (SequentialSearchTable<Key, Value>[]) new SequentialSearchTable[M];
             for (int i = 0; i < M; i++){
@@ -154,7 +153,7 @@ public class Ex34_HashCost {
             st[i].put(key, value);
         }
         public void resize(int newSize){
-            SeparateChainingHashTableCostRatio<Key, Value> temp = new SeparateChainingHashTableCostRatio<>(newSize, 5);
+            SeparateChainingHashTableCostRatio<Key, Value> temp = new SeparateChainingHashTableCostRatio<>(newSize);
             for (int i = 0; i < M; i++){
                 for (Key key : st[i].keys()){
                     if (key != null){
@@ -194,7 +193,7 @@ public class Ex34_HashCost {
 
     // the ratio of time required in LinearProbingHashTable for between hash() and compareTo()
     private class LinearProbingHashTableCostRatio<Key, Value>{
-        long[] timeCal = new long[2];
+        double[] timeCal = new double[2];
         private Key[] keys;
         private Value[] values;
         private int M;
@@ -250,7 +249,7 @@ public class Ex34_HashCost {
             N++;
         }
         public void resize(int newSize){
-            LinearProbingHashTableCostRatio<Key, Value> temp = new LinearProbingHashTableCostRatio<>(10);
+            LinearProbingHashTableCostRatio<Key, Value> temp = new LinearProbingHashTableCostRatio<>(newSize);
             for (int i = 0; i < M; i++){
                 if (keys[i] != null){
                     temp.put(keys[i], values[i]);
@@ -308,10 +307,10 @@ public class Ex34_HashCost {
         for (int i = 0; i < 20; i++){
             separateChainingHashTableCostRatioInteger.put(StdRandom.uniform(0, 100), StdRandom.uniform(1, 100));
         }
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 10; i++){
             separateChainingHashTableCostRatioInteger.get(i);
         }
-        for (int i = 1; i < 20; i++){
+        for (int i = 1; i < 10; i++){
             separateChainingHashTableCostRatioInteger.delete(i);
         }
         double timeCompareToCostForTypeInteger = separateChainingHashTableCostRatioInteger.timerCal1[0];
