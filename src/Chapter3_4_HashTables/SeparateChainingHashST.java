@@ -44,7 +44,9 @@ public class SeparateChainingHashST<Key, Value> {
         SeparateChainingHashST<Key, Value> temp = new SeparateChainingHashST<>(chains);
         for (int i = 0; i < M; i++) {
             for (Key key : st[i].keys()) {
-                temp.put(key, st[i].get(key));
+                if (key != null){
+                    temp.put(key, st[i].get(key));
+                }
             }
         }
         this.M  = temp.M;
