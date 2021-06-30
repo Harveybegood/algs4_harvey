@@ -16,6 +16,7 @@ import java.util.IllegalFormatCodePointException;
 * */
 public class Ex34_HotOrCold<Item> {
 
+    int numberOfGuess2lgN = 0;
     // finds the secret number in at most ~2lgN guesses
     public int guessSecretIntegerWith2lgN(int[] array, int secretIntegerIndex){
         Arrays.sort(array);
@@ -34,6 +35,7 @@ public class Ex34_HotOrCold<Item> {
         boolean hotter = currentGuessIsHotter(previousIndex, currentIndex, secretIntegerIndex);
         int middleIndex = previousIndex + (currentIndex - previousIndex) / 2;
         if (array[middleIndex] == array[secretIntegerIndex]){
+            numberOfGuess2lgN++;
             return array[secretIntegerIndex];
         }
         // if current guess is hotter the secret number than the previous, replace the previous number to guess number which is an actual middle number
@@ -49,17 +51,21 @@ public class Ex34_HotOrCold<Item> {
         int lowBound = secretNumberIndex - previousIndex;
         int highBound = currentIndex - secretNumberIndex;
         if (lowBound > highBound){
+            numberOfGuess2lgN++;
             return true;
         }
         else {
+            numberOfGuess2lgN++;
             return false;
         }
     }
 
+    int numberOfGuess1lgN = 0;
     // finds the secret number in at most ~1lgN guesses
     public int guessSecretIntegerWith1lgN(int[] array, int secretIntegerIndex){
         Arrays.sort(array);
         if (array[0] == array[secretIntegerIndex]){
+            numberOfGuess1lgN++;
             return array[secretIntegerIndex];
         }
         // array[0] is considered as a previous guess
@@ -69,10 +75,12 @@ public class Ex34_HotOrCold<Item> {
         int middleIndex = previousIndex + (currentIndex - previousIndex) / 2;
         // Assume that the current guess is hotter
         if (array[middleIndex] < array[secretIntegerIndex]){
+            numberOfGuess1lgN++;
             return guessSecretIntegerWith1lgN(middleIndex, currentIndex, array, secretIntegerIndex);
         }
         // Assume that the previous guess is hotter
         else if (array[middleIndex] > array[secretIntegerIndex]){
+            numberOfGuess1lgN++;
             return guessSecretIntegerWith1lgN(previousIndex, middleIndex, array, secretIntegerIndex);
         }
         else {
@@ -99,10 +107,10 @@ public class Ex34_HotOrCold<Item> {
         int[] array = hotOrCold.generateArray(20);
         int secretNumberIndex = 10;
         int guessNumber = hotOrCold.guessSecretIntegerWith2lgN(array, secretNumberIndex);
-        StdOut.println(guessNumber);
+        StdOut.println(guessNumber + " The number of guess: " + hotOrCold.numberOfGuess2lgN);
         int[] array1 = hotOrCold.generateArray(20);
         int secretNumberIndex1 = 10;
         int guessNumber1 = hotOrCold.guessSecretIntegerWith1lgN(array1, secretNumberIndex1);
-        StdOut.println(guessNumber1);
+        StdOut.println(guessNumber1 + " The number of guess: " + hotOrCold.numberOfGuess1lgN);
     }
 }
