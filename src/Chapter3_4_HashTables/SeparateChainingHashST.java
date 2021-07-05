@@ -112,6 +112,31 @@ public class SeparateChainingHashST<Key, Value> {
         }
         st[i].put(key, val);
     }
+    // Write another method put() that the ration of both the number of key-value pair and the number of table size will be
+    // a proportional of 100
+    public void putWithNdivideMEquals100(Key key, Value value){
+        if (key == null){throw new IllegalArgumentException("Key argument is null");}
+        if (value == null){throw new IllegalArgumentException("Value argument is null");}
+        int i = hashWithDesignatedModulus(key);
+        if (!st[i].contains(key)){
+            n++;
+        }
+        st[i].put(key, value);
+    }
+    // Write a method length of each linked list
+    public int lengthOfEachLinkedList(int indexTable){
+        int length = 0;
+        SequentialSearchST.Node node = st[indexTable].first;
+        if (node == null){
+            return 0;
+        }
+        while (node != null){
+            length++;
+            node = node.next;
+        }
+        return length;
+    }
+
      //Removes the specified key and its associated value from this symbol table
      //(if the key is in this symbol table).
     public void delete(Key key) {
