@@ -86,4 +86,20 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         node.N = size(node.left) + size(node.right) + 1;
         return node;
     }
+    public Value get(Key key){
+        if (key == null){throw new IllegalArgumentException("Argument key cannot be null");}
+        return get(root, key);
+    }
+    private Value get(Node node, Key key){
+        if (node == null){return null;}
+        if (node.key.compareTo(key) < 0){
+            return get(node.right, key);
+        }
+        else if (node.key.compareTo(key) > 0){
+            return get(node.left, key);
+        }
+        else {
+            return node.value;
+        }
+    }
 }
