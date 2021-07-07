@@ -21,7 +21,8 @@ public class Ex35_TimeCostsForPushdownStacks {
     *        resizing array
     *                            Integer             ~5N                    ~N
     *
-    *
+    *           The time cost is O(1) for each pushdown stack operation       
+    
     *        linked list for int:
     *                 Data references: N references for the enclosing Node class,
     *                                  N references for the next Node(including one first Node)
@@ -31,21 +32,22 @@ public class Ex35_TimeCostsForPushdownStacks {
     *        linked list for Integer:
     *                 Data references: N references for the enclosing Node class,
     *                                  N references for the next Node(including one first Node)
-    *                                  N references for inner references Integer
+    *                                  N references for inner class Integer
     *
-    *                 object:          N nodes object created
+    *                 object:          N Nodes object created
     *                                  N Integers object created
     *
     *
     *       resizing array for int:
-    *                 Data references: why not double N int values? then equals 2N
+    *                 Data references: by default, N for int value, and due to the resizing, it can be 1/4 to 4/4, hence 4N. meanwhile the stack has an array reference.
+                                       And, it has to consider int type for the length of array, it is 4 bytes. the total is ~5N
     *
-    *                 object:
+    *                 object: Initially, it create array with 1, then 2, then 4 ... 2^n. the total is lgN
     *
     *       resizing array for Integer:
-    *                 Data references:
+    *                 Data references: ditto for int
     *
-    *                 object:
+    *                 object: When the Item is Integer, except for time cost lgN, N for Integer objects created. hence the total is ~N
     *
     *
     * */
