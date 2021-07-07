@@ -9,16 +9,28 @@ public class Ex36_SpaceUsageForPushDownStacks {
 
     *       data structure      item type           space usage for N int values (bytes)
     *
-                                 int               : 16 for stack object + 8 for first Node + 4 int value + 4 padding, and then all multiply N
+                                 int in implementation            : 16 for Node object overhead + 8 for reference to next per Node(including one first Node) + 4 int value + 4 padding, all of them multiply N
+                                                                    and Stack object implementation: 16 object overhead + 8 for reference to first Node + 4 int value + 4 padding
+                                                                    So ~32N
     *        linked list
-    *                            Integer           : 16 for stack object + 8 for first Node + 8 references to inner Integer +
-                                                     16 for Integer object + 4 int value + 4 padding, and then all multiply N
+    *                            Integer in implementation        : 16 for Node object overhead + 8 for reference to next per Node(including one first node) + 8 for references to Integer +
+                                                                    16 for Integer object overhead + 4 int value + 4 padding, and then all multiply N
     *
-                                 int
+                                 int in implementation            : by default, 4 for int value, and then multiply N, equals 4N. leave out the object initialization and reference to array and int value for array size
+                                                                    and then, the array can be 1/4 to 4/4 full. so ~4N to 16N
     *        resizing array
-    *                            Integer
+    *                            Integer in implementation        : by default, 24 for (16 for Integer object overhead, 4 for int value, 4 for padding,) 8 for reference to Integer,
+                                                                    and, leave out 16 for stack object, 8 for reference to the array, 4 for array length and 4 for padding,
+                                                                    and then array can be 1/4 to 4/4. So ~(24 + 8)N to ~(24 + 32)N. 
     **/
 
+    public void resize(int newSize){
+        Item[] items = (Item[]) new Object[newSize];
+        for(int i = 0; i < n; i++){
+            items[i] = 
+        }
+        
+    }
      public class Stack<Item>
     {
         private Node first; // top of stack (most recently added node)
