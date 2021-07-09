@@ -1,12 +1,15 @@
 package Chapter3_3_BalancedSearchTrees;
 
+import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.Stack;
+
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private static final boolean RED = true;
     private static final boolean BLACK = false;
     public class Node{
-        Key key;
-        Value value;
-        Node left, right;
+        public Key key;
+        public Value value;
+        public Node left, right;
         int N;
         boolean color;
         public Node(Key key, Value value, int N, boolean color){
@@ -17,6 +20,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
     }
     public Node root;
+    public boolean isEmpty(){return root == null;}
     // create a method to tell if it's node is RED
     public boolean isRed(Node node){
         if (node == null) return false;
@@ -101,5 +105,125 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         else {
             return node.value;
         }
+    }
+     private void flipColors(Node node){
+        if (node == null){
+            return;
+        }
+        node.color = !node.color;
+        node.left.color = !node.left.color;
+        node.right.color = !node.right.color;
+    }
+    private Node moveRedLeft(Node node){
+        flipColors(node);
+        if (isRed(node.right.left)){
+            node.right = rotateRight(node.right);
+            node = rotateLeft(node);
+        }
+        return node;
+    }
+    private Node balance(Node node){
+        if (!isRed(node.left) && isRed(node.right)){
+            node = rotateLeft(node);
+        }
+        if (isRed(node.left) && isRed(node.left.left)){
+            node = rotateRight(node);
+        }
+        if (isRed(node.left) && isRed(node.right)){
+            flipColors(node);
+        }
+        return node;
+    }
+     public void delMin(){
+        if (!isRed(root.left) && !isRed(root.right)){
+            root.color = RED;
+        }
+        root = delMin(root);
+        if (!isEmpty()){
+            root.color = BLACK;
+        }
+    }
+    private Node delMin(Node node){
+        if (node.left == null){
+            return null;
+        }
+        if (!isRed(node.left) && !isRed(node.left.left)){
+            node = moveRedLeft(node);
+        }
+        node.left = delMin(node.left);
+        return balance(node);
+    }
+
+    public Key min(){
+        return min(root).key;
+    }
+    private Node min(Node node){
+        if (node.left == null){
+            return node;
+        }
+        return min(node.left);
+    }
+
+    public void delete(Key key){
+        if (key == null){throw new IllegalArgumentException("Argument cannot be omitted");}
+        if (!isRed(root.left) && !isRed(root.right)){
+            root.color = RED;
+        }
+        root = delete(root, key);
+        if (!isEmpty()){
+            root.color = BLACK;
+        }
+    }
+
+    private Node delete(Node node, Key key){
+        int cmp = key.compareTo(node.key);
+        if (cmp < 0){
+            if (!isRed(node.left) && !isRed(node.left.left)){
+                node = moveRedLeft(node);
+            }
+            node.left = delete(node.left, key);
+        }
+        else if (cmp > 0){
+            if (isRed(node.left)){
+                node = rotateRight(node);
+            }
+            if (!isRed(node.right) && !isRed(node.right.left)){
+                node = rotateRight(node);
+            }
+            node.right = delete(node.right, key);
+        }
+        else {
+            //Node temp = node;
+            if (node.right == null){
+                return null;
+            }
+            Node temp = min(node.right);
+            node.key = temp.key;
+            node.value = temp.value;
+            node.right = delMin(node.right);
+        }
+        return balance(node);
+    }
+    public Iterable<Key> keys(){
+        Queue<Key> queue = new Queue<>();
+        Stack<Node> stack = new Stack<>();
+        Node node = root;
+        while (node != null){
+            stack.push(node);
+            node = node.left;
+            if (node.left == null && node.right != null){
+                node = node.right;
+            }
+            if (node.left == null && node.right == null){
+                Node temp = stack.pop();
+                queue.enqueue(temp.key);
+                node = stack.pop();
+                queue.enqueue(node.key);
+                if (node.right != null){
+                    node = node.right;
+                }
+            }
+        }
+        return queue;
     }
 }
