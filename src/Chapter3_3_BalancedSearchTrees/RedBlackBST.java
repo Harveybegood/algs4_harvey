@@ -122,6 +122,15 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
         return node;
     }
+     public Key max(){
+        return max(root).key;
+    }
+    private Node max(Node node){
+        if (node.right == null){
+            return node;
+        }
+        return max(node.right);
+    }
     private Node balance(Node node){
         if (!isRed(node.left) && isRed(node.right)){
             node = rotateLeft(node);
@@ -204,7 +213,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
         return balance(node);
     }
-    public Iterable<Key> keys(){
+    /*public Iterable<Key> keys(){
         Queue<Key> queue = new Queue<>();
         Stack<Node> stack = new Stack<>();
         Node node = root;
@@ -225,5 +234,29 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             }
         }
         return queue;
+    }*/
+    public Iterable<Key> keys(){
+        return keys(min(), max());
+    }
+    public Iterable<Key> keys(Key min, Key max){
+        Queue<Key> queue = new Queue<>();
+        keys(root, queue, min, max);
+        return queue;
+    }
+    private void keys(Node node, Queue<Key> queue, Key min, Key max){
+        if (node == null){
+            return;
+        }
+        int cmpLo = min.compareTo(node.key);
+        int cmpHi = max.compareTo(node.key);
+        if (cmpLo < 0){
+            keys(node.left, queue, min, max);
+        }
+        if (cmpLo <=0 && cmpHi >= 0){
+            queue.enqueue(node.key);
+        }
+        if (cmpHi > 0){
+            keys(node.right, queue, min, max);
+        }
     }
 }
