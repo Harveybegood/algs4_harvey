@@ -62,8 +62,9 @@ public class Ex40_3_SumForRandomValues {
             3200 1279200 4.00
             6400 5118400 4.00
 
-            Based on the experiments above, we find that the doubling ratio is 4. If given that the number of int value is N,
-            We come to conclude a mathematical model as: N * 4 = the number of triples of N random int values
+            Based on the experiments above, we find that the doubling ratio approximate 4 and then ,after 4 times, is 4.
+            If given that the initial number of int value is N, We come to conclude a mathematical model as:
+            N * X * 4 = the number of triples of N random int values
 
 *
 * */
