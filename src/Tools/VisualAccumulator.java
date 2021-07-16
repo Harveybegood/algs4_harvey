@@ -39,8 +39,23 @@ public class VisualAccumulator {
         StdDraw.setPenColor(color);
         StdDraw.point(xCoordinate, yCoordinate);
     }
+    public double mean(){
+        return total / size;
+    }
+    public void writeFinalMean(){
+        StdDraw.setPenColor(StdDraw.RED);
+        long roundMean = Math.round(mean());
+        StdDraw.text(size + (size * 0.04), mean(), String.valueOf(roundMean));
+    }
+    public void writeExactFinalMean(){
+        StdDraw.setPenColor(StdDraw.RED);
+        StdDraw.text(size + (size * 0.04), mean(), String.format("%.1f", mean()));
+    }
     public void writeText(String text, double xCoordinate, double yCoordinate, Color color){
         StdDraw.setPenColor(color);
         StdDraw.text(xCoordinate, yCoordinate, text);
+    }
+    public String toString(){
+        return "Mean (" + size + " value); " + String.format("%7.5f", mean());
     }
 }
