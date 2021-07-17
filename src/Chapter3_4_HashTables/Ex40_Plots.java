@@ -3,6 +3,7 @@ package Chapter3_4_HashTables;
 import Tools.Constants;
 import Tools.FileTool;
 import Tools.VisualAccumulator;
+import edu.princeton.cs.algs4.StdOut;
 
 /*
 *   Plots. Instrument LinearProbingHashST and SeparateChainingHashST to produce plots like the ones shown in the text.
@@ -43,6 +44,7 @@ public class Ex40_Plots<Key, Value> extends SeparateChainingHashST<Key, Value> {
             if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
             if (value == null){throw new IllegalArgumentException("Argument cannot be null");}
             for (Node node = first; node != null; node = node.next){
+                costOfCompares++;
                 if (node.key.equals(key)){
                     node.value = value;
                     return costOfCompares;
@@ -94,8 +96,8 @@ public class Ex40_Plots<Key, Value> extends SeparateChainingHashST<Key, Value> {
         String title = "Cost of Compares for SeparateChaining Hash ST in put operations";
         String xAxisLabel = "operations";
         String yAxisLabel = "compare equality";
-        double maxNumberOfOperations = 18000;
-        double maxCost = 25;
+        double maxNumberOfOperations = 16000;
+        double maxCost = 22;
         int originValue = 0;
         VisualAccumulator visualAccumulator = new VisualAccumulator(originValue, maxNumberOfOperations, maxCost, title,
                 xAxisLabel, yAxisLabel);
@@ -126,7 +128,14 @@ public class Ex40_Plots<Key, Value> extends SeparateChainingHashST<Key, Value> {
     }
     private static final String TALE_FILE_PATH = Constants.FILE_PATH + "tale.txt";
     public static void main(String[] args) {
-        String[] wordsInTale = FileTool.getAllStringsFromFile("/usr/local/algs4-data/tale.txt");
+        //Scanner scanner= new Scanner(TALE_FILE_PATH);
+        String[] wordsInTale = FileTool.getAllStringsFromFile(TALE_FILE_PATH);
+        //String[] wordsTale = FileTool.storeInStringArrayFromATextFile(TALE_FILE_PATH);
+        for (String s : wordsInTale){
+            if (s.length() > 10){
+                StdOut.println(s);
+            }
+        }
         new Ex40_Plots<>().frequencyCounter(wordsInTale, 8);
     }
 }
