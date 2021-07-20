@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.SequentialSearchST;
 *
 * */
 public class Ex02_SequentialSearchSET {
-    private class SET<Key extends Comparable<Key>>{
+    private class SET<Key>{
         private SequentialSearchST<Key, Boolean> st;
         public SET(){
             st = new SequentialSearchST<>();
