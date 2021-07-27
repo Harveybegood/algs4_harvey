@@ -9,8 +9,8 @@ import Chapter3_4_HashTables.LinearProbingHashST;
 * */
 @SuppressWarnings("unchecked")
 public class Ex04_ClassesHashSTintHashSTdouble {
-    // I do not write the LinearProbingHashST accordingly, just apply for it with primitive type
-    private LinearProbingHashST<Integer, Integer> stint; 
+    // I do not write the LinearProbingHashST accordingly, just apply for it with primitive date type
+    private LinearProbingHashST<Integer, Integer> stint;
     private LinearProbingHashST<Double, Double> stdouble;
     private class HashSTint{
         public HashSTint(){

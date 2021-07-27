@@ -223,7 +223,7 @@ public class Ex05_RedBlackBSTWithPrimitiveTypes {
             }
             if (key == node.key) {
                 node.key = min(node.right).key;
-                node.value = get(node.right, min()).value;
+                node.value = get(node.right, min(node.right).key).value;
                 node.right = deleteMin(node.right);
             }
             else {

@@ -113,17 +113,19 @@ public class Ex06_HashSETintdouble {
         hashSETint.put(343);
         StdOut.println("All keys in the symbol table");
         for (Integer i : hashSETint.keys()){
-            StdOut.println(i);
+            StdOut.print(i + " ");
         }
+        StdOut.println();
         StdOut.println("The size of Symbol table: " + hashSETint.size() + " expected 11");
         StdOut.println("If containing 3: " + hashSETint.contains(3) + " expected true");
         hashSETint.delete(3);
         StdOut.println("If containing 3: " + hashSETint.contains(3) + " expected false");
         StdOut.println("All keys in the symbol table after deleting 3");
         for (Integer i : hashSETint.keys()){
-            StdOut.println(i);
+            StdOut.print(i + " ");
         }
-        StdOut.println("The size of symbol table: 10" + hashSETint.size() + " expected 10");
+        StdOut.println();
+        StdOut.println("The size of symbol table: " + hashSETint.size() + " expected 10");
     }
 
 

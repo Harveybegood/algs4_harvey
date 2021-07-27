@@ -182,7 +182,7 @@ public class Ex09_BSTWithDuplicateKeys<Key extends Comparable<Key>, Value> {
             E  5 6
             E  5 6
             G  9
-            H  10 
+            H  10
             M  12
             R  15
             S  20
