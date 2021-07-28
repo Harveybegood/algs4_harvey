@@ -37,7 +37,19 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
     }
     public boolean contains(Key key){
         if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
-        return get(key) != null;
+        Node node = root;
+        while (node != null){
+            if (key.compareTo(node.key) < 0){
+                node = node.left;
+            }
+            else if (key.compareTo(node.key) > 0){
+                node = node.right;
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
     }
 
     public Value get(Key key){
