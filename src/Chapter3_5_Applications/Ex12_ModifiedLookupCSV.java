@@ -25,7 +25,7 @@ public class Ex12_ModifiedLookupCSV {
             //StdOut.println("The length of tokens " + lengthOfArrays);
             for (int i = 1; i < lengthOfArrays; i++){
                 val[i] = tokens[i];
-                st.put(key, val[i]);
+                st.put(;
             }
         }
         while (!StdIn.isEmpty()){
