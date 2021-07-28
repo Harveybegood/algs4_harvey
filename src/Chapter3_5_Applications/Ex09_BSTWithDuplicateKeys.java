@@ -1,6 +1,5 @@
 package Chapter3_5_Applications;
 
-import com.sun.org.apache.xerces.internal.impl.XML11NSDocumentScannerImpl;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -39,7 +38,7 @@ public class Ex09_BSTWithDuplicateKeys<Key extends Comparable<Key>, Value> {
         if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
         StringBuilder stringBuilder = new StringBuilder();
         get(root, key, stringBuilder);
-        return (Value) stringBuilder;
+        return (Value) stringBuilder.toString();
     }
     private void get(Node node, Key key, StringBuilder stringBuilder){
         if (node == null){return;}
