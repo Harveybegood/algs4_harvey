@@ -130,9 +130,15 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         return newNode;
     }
     public void flipColor(Node node){
-        node.color = !node.color;
-        node.left.color = !node.left.color;
-        node.right.color = !node.right.color;
+        if (node == null || node.left == null || node.right == null){
+            return;
+        }
+        if ((isRed(node) && !isRed(node.left) && !isRed(node.right)) ||
+                (!isRed(node) && isRed(node.left) && isRed(node.right))){
+            node.color = !node.color;
+            node.left.color = !node.left.color;
+            node.right.color = !node.right.color;
+        }
     }
     public Key min(){
         if (isEmpty()){throw new RuntimeException("Red Black BST underflow");}
@@ -170,7 +176,7 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
             node = moveRedLeft(node);
         }
         node.left = deleteMin(node.left);
-        node.numberOfNodes = size(node.left) + size(node.right) + 1;
+        //node.numberOfNodes = size(node.left) + size(node.right) + 1;
         return balance(node);
     }
     public void deleteMax(){
@@ -199,8 +205,9 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
     public Node moveRedLeft(Node node){
         flipColor(node);
         if (isRed(node.right.left)){
-            node.right = rotateToRight(node.right.left);
+            node.right = rotateToRight(node.right);
             node = rotateToLeft(node);
+            //flipColor(node);
         }
         return node;
     }
@@ -208,19 +215,24 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         flipColor(node);
         if (!isRed(node.left.left)){
             node = rotateToRight(node);
+            //flipColor(node);
         }
         return node;
     }
     public Node balance(Node node){
+        if (isRed(node.right)){
+            node = rotateToLeft(node);
+        }
         if (isRed(node.left) && isRed(node.left.left)){
             node.left = rotateToRight(node);
         }
-        if (!isRed(node.left) && isRed(node.right)){
+        /*if (!isRed(node.left) && isRed(node.right)){
             node.right = rotateToLeft(node);
-        }
+        }*/
         if (isRed(node.left) && isRed(node.right)){
             flipColor(node);
         }
+        node.numberOfNodes = size(node.left) + size(node.right) + 1;
         return node;
     }
     public void delete(Key key){
@@ -265,7 +277,7 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
                 node.right = delete(node.right, key);
             }
         }
-        node.numberOfNodes = size(node.left) + size(node.right) + 1;
+        //node.numberOfNodes = size(node.left) + size(node.right) + 1;
         return balance(node);
     }
     public Iterable<Key> keys(){
@@ -300,6 +312,7 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         redBlackBSTWithDuplicatekeys.put("G", 8);
         redBlackBSTWithDuplicatekeys.put("M", 12);
         StdOut.println("All keys in Red Black BST");
+        StdOut.println("The size in symbol table " + redBlackBSTWithDuplicatekeys.size() + " expected 8");
         for (String s : redBlackBSTWithDuplicatekeys.keys()){
             StdOut.println(s + "  " + redBlackBSTWithDuplicatekeys.get(s));
         }
@@ -308,5 +321,6 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         for (String s : redBlackBSTWithDuplicatekeys.keys()){
             StdOut.println(s + "  " + redBlackBSTWithDuplicatekeys.get(s));
         }
+        StdOut.println("The size after deleting duplicate keys " + redBlackBSTWithDuplicatekeys.size() + " expected 6");
     }
 }
