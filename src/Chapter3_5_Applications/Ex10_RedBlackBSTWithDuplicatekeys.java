@@ -100,14 +100,17 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
             node = rotateToRight(node);
         }
         if (isRed(node.left) && isRed(node.right)){
-            flipColor(node);
+            //flipColor(node);
+            node.color = RED;
+            node.left.color = BLACK;
+            node.right.color = BLACK;
         }
         node.numberOfNodes = size(node.left) + size(node.right) + 1;
         return node;
     }
     public boolean isRed(Node node){
         if (node == null){return false;}
-        return node.color = RED;
+        return node.color == RED;
     }
     public Node rotateToLeft(Node node){
         Node newNode = node.right;
@@ -176,12 +179,11 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
             node = moveRedLeft(node);
         }
         node.left = deleteMin(node.left);
-        //node.numberOfNodes = size(node.left) + size(node.right) + 1;
         return balance(node);
     }
     public void deleteMax(){
         if (isEmpty()){throw new RuntimeException("Red Black BST underflow");}
-        if (isRed(root.left) && isRed(root.right)){
+        if (!isRed(root.left) && !isRed(root.right)){
             root.color = RED;
         }
         root = deleteMax(root);
@@ -207,7 +209,7 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         if (isRed(node.right.left)){
             node.right = rotateToRight(node.right);
             node = rotateToLeft(node);
-            //flipColor(node);
+            flipColor(node);
         }
         return node;
     }
@@ -215,7 +217,7 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         flipColor(node);
         if (!isRed(node.left.left)){
             node = rotateToRight(node);
-            //flipColor(node);
+            flipColor(node);
         }
         return node;
     }
@@ -223,12 +225,13 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         if (isRed(node.right)){
             node = rotateToLeft(node);
         }
-        if (isRed(node.left) && isRed(node.left.left)){
-            node.left = rotateToRight(node);
+
+        if (!isRed(node.left) && isRed(node.right)){
+            node = rotateToLeft(node);
         }
-        /*if (!isRed(node.left) && isRed(node.right)){
-            node.right = rotateToLeft(node);
-        }*/
+        if (isRed(node.left) && isRed(node.left.left)){
+            node = rotateToRight(node);
+        }
         if (isRed(node.left) && isRed(node.right)){
             flipColor(node);
         }
@@ -246,7 +249,7 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
         }
     }
     private Node delete(Node node, Key key){
-        if (node == null){return null;}
+        //if (node == null){return null;}
         if (key.compareTo(node.key) < 0){
             if (!isRed(node.left) && !isRed(node.left.left)){
                 node = moveRedLeft(node);
@@ -269,14 +272,26 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
                 node = min(node.right);
                 node.right = deleteMin(temp.right);
                 node.left = temp.left;
-                if (key.compareTo(node.key) == 0){
+                /*if (key.compareTo(node.key) == 0){
                     node = delete(node, key);
+                }*/
+                //Node reTravelTree = root;
+                if (node.left != null && key.compareTo(node.left.key) ==0){
+                    node.left = delete(node.left, key);
                 }
+                if (node.right != null && key.compareTo(node.right.key) == 0){
+                    node.right = delete(node.right, key);
+                }
+
             }
             else {
                 node.right = delete(node.right, key);
             }
+
         }
+        /*if (contains(key)){
+            delete(root, key);
+        }*/
         //node.numberOfNodes = size(node.left) + size(node.right) + 1;
         return balance(node);
     }
