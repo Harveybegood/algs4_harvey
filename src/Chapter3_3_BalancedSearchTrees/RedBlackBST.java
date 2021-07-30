@@ -2,6 +2,7 @@ package Chapter3_3_BalancedSearchTrees;
 
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdOut;
 
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private static final boolean RED = true;
@@ -122,6 +123,14 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
         return node;
     }
+    private Node moveRedRight(Node node){
+        flipColors(node);
+        if (!isRed(node.left.left)){
+            node = rotateRight(node);
+        }
+        return node;
+    }
+
      public Key max(){
         return max(root).key;
     }
@@ -143,7 +152,18 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
         return node;
     }
-     public void delMin(){
+
+
+    public Key min(){
+        return min(root).key;
+    }
+    private Node min(Node node){
+        if (node.left == null){
+            return node;
+        }
+        return min(node.left);
+    }
+    public void delMin(){
         if (!isRed(root.left) && !isRed(root.right)){
             root.color = RED;
         }
@@ -162,17 +182,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         node.left = delMin(node.left);
         return balance(node);
     }
-
-    public Key min(){
-        return min(root).key;
-    }
-    private Node min(Node node){
-        if (node.left == null){
-            return node;
-        }
-        return min(node.left);
-    }
-
     public void delete(Key key){
         if (key == null){throw new IllegalArgumentException("Argument cannot be omitted");}
         if (!isRed(root.left) && !isRed(root.right)){
@@ -192,24 +201,24 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             }
             node.left = delete(node.left, key);
         }
-        else if (cmp > 0){
+        else {
             if (isRed(node.left)){
                 node = rotateRight(node);
             }
-            if (!isRed(node.right) && !isRed(node.right.left)){
-                node = rotateRight(node);
-            }
-            node.right = delete(node.right, key);
-        }
-        else {
-            //Node temp = node;
-            if (node.right == null){
+            if (key.compareTo(node.key) == 0 && (node.right == null)){
                 return null;
             }
-            Node temp = min(node.right);
-            node.key = temp.key;
-            node.value = temp.value;
-            node.right = delMin(node.right);
+            if (!isRed(node.right) && !isRed(node.right.left)){
+                node = moveRedRight(node);
+            }
+            if (key.compareTo(node.key) == 0) {
+                node.key = min(node.right).key;
+                node.value = get(node.right, min(node.right).key);
+                node.right = delMin(node.right);
+            }
+            else {
+                node.right = delete(node.right, key);
+            }
         }
         return balance(node);
     }
@@ -257,6 +266,20 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
         if (cmpHi > 0){
             keys(node.right, queue, min, max);
+        }
+    }
+
+    public static void main(String[] args) {
+        RedBlackBST<String, Integer> redBlackBST = new RedBlackBST<>();
+        redBlackBST.put("R", 15);
+        redBlackBST.put("E", 5);
+        redBlackBST.put("S", 20);
+        redBlackBST.put("A", 1);
+        redBlackBST.put("H", 10);
+        redBlackBST.put("G", 8);
+        redBlackBST.put("M", 12);
+        for (String s : redBlackBST.keys()){
+            StdOut.println(s + " " + redBlackBST.get(s));
         }
     }
 }
