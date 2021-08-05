@@ -164,7 +164,7 @@ public class Ex18_Multisets {
         Iterable<Key> keys(Key lo, Key hi);
         String toString();
     }
-    private class BinarySearchMultiSET<Key> implements MultiSET<Key>{
+    /*private class BinarySearchMultiSET<Key> implements MultiSET<Key>{
 
-    }
+    }*/
 }
