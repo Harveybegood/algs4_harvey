@@ -1,6 +1,8 @@
 package Chapter3_5_Applications;
 import Chapter2_5_Applications.Ex19_KendallTauDistance;
 import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.StdOut;
+
 /*
 *   Equal keys in symbol tables. Consider the API MultiST(unordered and ordered)to be the same as our symbol-table APIs
 *   defined on page 363 and page 366, but with equal keys allowed, so that the semantics of get() is to return any value
@@ -10,6 +12,7 @@ import edu.princeton.cs.algs4.Queue;
 *   a starting point, develop implementations SeparateChainingMultiST and BinarySearchMultiST for these APIs.
 *
 * */
+@SuppressWarnings("unchecked")
 public class Ex19_EqualKeysInSymbolTables {
     // leave it, since a similar one already written in previous algorithm
     private class SeparateChainingMultiST<Key, Value>{}
@@ -40,18 +43,24 @@ public class Ex19_EqualKeysInSymbolTables {
         // associated values
         public Value get(Key key){
             if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
-            return get(root, key).value;
+            StringBuilder string = new StringBuilder();
+            get(root, key, string);
+            return (Value) string.toString();
         }
-        private Node get(Node node, Key key){
-            if (node == null){return null;}
+        private void get(Node node, Key key, StringBuilder string){
+            if (node == null){return;}
             if (key.compareTo(node.key) < 0){
-                return get(node.left, key);
+                get(node.left, key, string);
             }
             else if (key.compareTo(node.key) > 0){
-                return get(node.right, key);
+                get(node.right, key, string);
             }
             else {
-                return node;
+                // bugs here, the duplicated keys which will be associated with all possible values
+                string.append(node.value).append(" ");
+                if (node.right != null && node.key.compareTo(node.right.key) == 0){
+                    get(node.right, key, string);
+                }
             }
         }
         public Iterable<Value> getAll(Key key){
@@ -195,6 +204,7 @@ public class Ex19_EqualKeysInSymbolTables {
             }
             return max(node.right);
         }
+        // bugs while deleting duplicated keys
         public void deleteMin(){
             if (isEmpty()){throw new RuntimeException("Symbol table underflow");}
             root = deleteMin(root);
@@ -207,6 +217,7 @@ public class Ex19_EqualKeysInSymbolTables {
             node.numberOfNodes = size(node.left) + size(node.right) + 1;
             return node;
         }
+        // bugs while deleting duplicated keys
         public void deleteMax(){
             if (isEmpty()){throw new RuntimeException("Symbol table underflow");}
             root = deleteMax(root);
@@ -219,6 +230,7 @@ public class Ex19_EqualKeysInSymbolTables {
             node.numberOfNodes = size(node.left) + size(node.right) + 1;
             return node;
         }
+        // bugs while deleting duplicated keys
         public void delete(Key key){
             if (key == null){throw new IllegalArgumentException("Argument cannot be null");}
             if (isEmpty()){throw new RuntimeException("Symbol table underflow");}
@@ -291,6 +303,12 @@ public class Ex19_EqualKeysInSymbolTables {
         binarySearchMultiST.put("M", 16);
         binarySearchMultiST.put("H", 12);
         binarySearchMultiST.put("R", 18);
+        for (String s : binarySearchMultiST.keys()){
+            StdOut.println(s + " " + binarySearchMultiST.get(s));
+        }
+        StdOut.println(binarySearchMultiST.getAll("E"));
+        binarySearchMultiST.delete("E");
+
     }
 
 }
