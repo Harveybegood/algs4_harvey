@@ -140,7 +140,9 @@ public class Ex23_SparseMatrices {
 
         // return this + that
         public SparseMatrix plus(SparseMatrix that) {
-            if (this.n != that.n) throw new RuntimeException("Dimensions disagree");
+            if (this.n != that.n) {
+                throw new RuntimeException("Dimensions disagree");
+            }
             SparseMatrix result = new SparseMatrix(n);
             for (int i = 0; i < n; i++)
                 result.rows[i] = this.rows[i].plus(that.rows[i]);
