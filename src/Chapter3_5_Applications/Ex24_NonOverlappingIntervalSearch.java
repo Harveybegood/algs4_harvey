@@ -13,11 +13,8 @@ import edu.princeton.cs.algs4.StdOut;
 * */
 public class Ex24_NonOverlappingIntervalSearch {
 
-    // This implementation will follow up the intervals documented in his exercise. the dimension for each interval
-    // will be designed as the largest one 5666653 - 5669321
     private SparseVector[] rows;
 
-    //private int n = 5669321 - 5666653;
     public Ex24_NonOverlappingIntervalSearch(){
         rows = new SparseVector[4];
         for (int i = 0; i < 4; i++){
@@ -25,14 +22,7 @@ public class Ex24_NonOverlappingIntervalSearch {
             rows[i] = new SparseVector(d);
         }
     }
-    // build up intervals
-   /* public int[] buildIntervals(int m, int n){
-        int[] intervals = new int[n];
-        for (int i = m; i <= n; i++){
-            intervals[i] = i;
-        }
-        return intervals;
-    }*/
+
    private int[][] intervals = {
             {1643, 2033},
             {5532, 7643},
@@ -40,7 +30,7 @@ public class Ex24_NonOverlappingIntervalSearch {
             {5666653, 5669321}
     };
 
-    // put each of value of each interval to vector
+    // put each value of every interval to vector
     public void buildVector(){
         for (int i = 0; i < 4; i++){
             int j = 0;
