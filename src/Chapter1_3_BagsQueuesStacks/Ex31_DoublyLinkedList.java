@@ -1,9 +1,9 @@
 package Chapter1_3_BagsQueuesStacks;
 
-import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Iterator;
+
 
 /*
 *   Implement a nested class DoubleNode for building doubly-linked lists, where each node contains a reference to the item
@@ -13,8 +13,8 @@ import java.util.Iterator;
 *
 * */
 @SuppressWarnings("unchecked")
-public class Ex31_DoublyLinkedList{
-    private static class DoubleNode<Item> implements Iterable<Item>{
+public class Ex31_DoublyLinkedList<Item>{
+    public static class DoubleNode<Item> implements Iterable<Item>{
         Item item;
         DoubleNode next;
         DoubleNode prev;
@@ -41,6 +41,23 @@ public class Ex31_DoublyLinkedList{
                 newFirst.prev = first;
                 n++;
             }
+        }
+        public DoubleNode insertBeginningAndReturnNode(Item item){
+            if (isEmpty()){
+                first = new DoubleNode<>();
+                first.item = item;
+                last = first;
+                n++;
+            }
+            else {
+                DoubleNode<Item> newFirst = first;
+                first = new DoubleNode<>();
+                first.item = item;
+                first.next = newFirst;
+                newFirst.prev = first;
+                n++;
+            }
+            return first;
         }
         public void insertEnd(Item item){
             if (isEmpty()){
@@ -75,6 +92,15 @@ public class Ex31_DoublyLinkedList{
             last = last.prev;
             n--;
             return item;
+        }
+        public DoubleNode removeEndAndReturnNode(){
+            if (isEmpty()){
+                throw new UnsupportedOperationException("Double linked list is under flow");
+            }
+            last.prev.next = null;
+            last = last.prev;
+            n--;
+            return first;
         }
         private void insertBeforeNode(Item item1, Item item2){
             if (isEmpty()){
@@ -176,12 +202,14 @@ public class Ex31_DoublyLinkedList{
             }
         }
     }
-    private static int n;
+    public static int n;
     public static boolean isEmpty(){return n == 0;}
     // insert at the beginning
     public static <Item> void insertAtBeginning(Item item, DoubleNode doubleNode){
         doubleNode.insertBeginning(item);
     }
+    public <Item> void insertAtTheBeginning(Item item, DoubleNode doubleNode){doubleNode.insertBeginning(item);}
+    public DoubleNode insertAtTheBeginningAndReturnNode(Item item, DoubleNode doubleNode){return doubleNode.insertBeginningAndReturnNode(item);}
     // insert at the end
     public static <Item> void insertAtEnd(Item item, DoubleNode doubleNode){
         doubleNode.insertEnd(item);
@@ -194,6 +222,7 @@ public class Ex31_DoublyLinkedList{
     public static void removeFromEnd(DoubleNode doubleNode){
         StdOut.println(doubleNode.removeEnd());
     }
+    public Item removeFromEndAndReturnItem(){return (Item) new DoubleNode<>().removeEndAndReturnNode().item.toString();}
     // insert before a given node
     public static <Item> void insertBeforeGivenNode(Item item1, Item item2, DoubleNode doubleNode){
         doubleNode.insertBeforeNode(item1, item2);
@@ -209,6 +238,7 @@ public class Ex31_DoublyLinkedList{
 
     public static void main(String[] args) {
         Ex31_DoublyLinkedList doublyLinkedList = new Ex31_DoublyLinkedList();
+
         DoubleNode<String> doubleNode = new DoubleNode<>();
         insertAtBeginning("R", doubleNode);
         insertAtBeginning("H", doubleNode);
