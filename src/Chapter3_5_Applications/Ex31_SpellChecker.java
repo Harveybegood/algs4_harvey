@@ -7,6 +7,8 @@ import edu.princeton.cs.algs4.RedBlackBST;
 *   Spell checker. With the file dictionary.txt from the booksite as command-line argument, the BlackFilter client described on page 491
 *   prints all misspelled words in a text file taken from standard input. Compare the performance of RedBlackBST, SeparateChainingHashST,
 *   and LinearProbingHashST for the file WarAndPeace.txt(available on the booksite)with this client and discuss the results.
+        dictionary file: algs4-data/WarandPeace.txt
+*       standard input: algs4-data/warAndPeace.txt
 *
 * */
 @SuppressWarnings("unchecked")
