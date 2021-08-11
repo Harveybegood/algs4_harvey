@@ -164,17 +164,18 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return min(node.left);
     }
 
-    public Key select(int i){
-        if (i < 0 || i > size()){throw new IllegalArgumentException("Illegal argument");}
-        return select(root, i).key;
+    public Key select(int k){
+        if (k < 0 || k > size()){throw new IllegalArgumentException("Illegal argument");}
+        return select(root, k).key;
     }
-    private Node select(Node node, int i){
+    private Node select(Node node, int k){
         if (node == null){return null;}
-        if (i < node.left.N){
-            return select(node.left, i);
+        int t = size(node.left);
+        if (t > k){
+            return select(node.left, k);
         }
-        else if (i > node.right.N){
-            return select(node.right, i - node.left.N - 1);
+        else if (t < k){
+            return select(node.right, k - t - 1);
         }
         else {
             return node;
@@ -235,7 +236,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         if (!isRed(node.right) && !isRed(node.right.left)){
             node = moveRedRight(node);
         }
-        node.right = delMin(node.right);
+        node.right = delMax(node.right);
         return balance(node);
     }
     public void delete(Key key){
