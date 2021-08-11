@@ -1,11 +1,13 @@
 package Chapter3_5_Applications;
 
+import Chapter1_4AnalysisOfAlgorithms.Ex13_AmountOfMemory;
 import Chapter3_3_BalancedSearchTrees.RedBlackBST;
 import Chapter3_4_HashTables.LinearProbingHashST;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 
 /*
 *   List. Develop an implementation of the following API:
@@ -32,7 +34,7 @@ public class Ex27_List<Item> implements Iterable<Item> {
             minKey = 0;
         }
         else {
-            minKey = findItemByPositionST.min();
+            minKey = findItemByPositionST.min() - 1;
         }
         findItemByPositionST.put(minKey, item);
         searchItemST.put(item, minKey);
@@ -47,7 +49,7 @@ public class Ex27_List<Item> implements Iterable<Item> {
             maxKey = 0;
         }
         else {
-            maxKey = findItemByPositionST.max();
+            maxKey = findItemByPositionST.max() + 1;
         }
         findItemByPositionST.put(maxKey, item);
         searchItemST.put(item, maxKey);
@@ -88,9 +90,9 @@ public class Ex27_List<Item> implements Iterable<Item> {
         if (contains(item)){
             return;
         }
-        double index = findItemByPositionST.select(i);
-        findItemByPositionST.put(index, item);
-        searchItemST.put(item, index);
+        double key = findItemByPositionST.select(i);
+        findItemByPositionST.put(key, item);
+        searchItemST.put(item, key);
     }
 
     // remove the ith item from the list
@@ -121,15 +123,16 @@ public class Ex27_List<Item> implements Iterable<Item> {
         return new ListIterator();
     }
     private class ListIterator implements Iterator<Item>{
+        //LinkedList<Double> linkedList;
         Queue<Double> queue;
         public ListIterator(){
             queue = new Queue<>();
-            for (Double key : findItemByPositionST.keys()){
+            for(Double key : findItemByPositionST.keys()){
                 queue.enqueue(key);
             }
         }
         public boolean hasNext(){
-            return !queue.isEmpty();
+            return queue.size() > 0;
         }
         public Item next(){
             return findItemByPositionST.get(queue.dequeue());
@@ -143,7 +146,32 @@ public class Ex27_List<Item> implements Iterable<Item> {
         list.addBack(20);
         list.addBack(21);
         for (Integer i : list){
-            StdOut.print(i + " ");
+            StdOut.print(i + "  ");
+        }
+        StdOut.println("\nAdd item 15 to index 2");
+        list.add(2, 15);
+        for (Integer i : list){
+            StdOut.print(i + "  ");
+        }
+        StdOut.print("\nDelete the front item of List: ");
+        StdOut.println(list.deleteFront());
+        for (Integer i : list){
+            StdOut.print(i + "  ");
+        }
+        StdOut.print("\nDelete the back item of List: ");
+        StdOut.println(list.deleteBack());
+        for (Integer i : list){
+            StdOut.print(i + "  ");
+        }
+        StdOut.println("\nDelete the item 20 of List: ");
+        list.delete(new Integer(20));
+        for (Integer i : list){
+            StdOut.print(i);
+        }
+        StdOut.println("\nDelete item on index 0th");
+        list.delete(0);
+        for (Integer i : list){
+            StdOut.print(i + "  ");
         }
     }
 
