@@ -1,8 +1,9 @@
 package Chapter3_5_Applications;
 
-import edu.princeton.cs.algs4.ST;
+import Chapter1_3_BagsQueuesStacks.Ex31_DoublyLinkedList;
+import edu.princeton.cs.algs4.StdOut;
 
-import java.util.LinkedList;
+import java.util.HashMap;
 
 /*
 *   LRU cache. Create a data structure that supports the following operations: access and remove. The access operation inserts the item onto
@@ -13,37 +14,42 @@ import java.util.LinkedList;
 *   beginning. When you remove an element, delete it from the end and remove it from the symbol table.
 *
 * */
-public class Ex26_LRUCache {
-    private class DoublyLinkedList<Item>{
-        private class Node{
-            Item item;
-            Node next, prev;
-            public Node(Item item, Node next, Node prev){
-                this.item = item;
-                this.next = next;
-                this.prev = prev;
-            }
-            private Node first;
-            private Node last;
-        }
-        public DoublyLinkedList(){
+@SuppressWarnings("unchecked")
+public class Ex26_LRUCache<Item> {
+    private Ex31_DoublyLinkedList doublyLinkedList;
 
-        }
-        private int n;
-        public boolean isEmpty(){return n == 0;}
-        public int size(){return n;}
-        public void dLinkedListAdd(Item item){
-
-        }
-    }
-    private ST<String, LinkedList<Integer>> st;
+    HashMap<Item, Ex31_DoublyLinkedList.DoubleNode> st;
     public Ex26_LRUCache(){
-        st = new ST<>();
+        doublyLinkedList = new Ex31_DoublyLinkedList();
+        st = new HashMap<>();
     }
-    public void add(){
-        if (!st.contains("a")){st.put("a", new LinkedList<>());}
+    public void access(Item item){
+        Ex31_DoublyLinkedList.DoubleNode itemInList = st.get(item);
+        if (st.containsKey(item)){
+            doublyLinkedList.insertAtTheBeginning(item, itemInList);
+        }
+        Ex31_DoublyLinkedList.DoubleNode newNode = doublyLinkedList.insertAtTheBeginningAndReturnNode(item, itemInList);
+        st.put(item, newNode);
+    }
+    public Item remove(){
+        Item tailOfDoublyLinkedList = (Item) doublyLinkedList.removeFromEndAndReturnItem();
+        st.remove(tailOfDoublyLinkedList);
+        return tailOfDoublyLinkedList;
+    }
 
+    public static void main(String[] args) {
+        Ex26_LRUCache<String> lruCache = new Ex26_LRUCache<>();
+        lruCache.access("A");
+        lruCache.access("B");
+        lruCache.access("C");
+        for (String s : lruCache.st.keySet()){
+            StdOut.println(s);
+        }
+        lruCache.remove();
+        for (String s : lruCache.st.keySet()){
+            StdOut.println(s);
+        }
+        lruCache.access("A");
     }
-    public void access(){}
-    
 }
+

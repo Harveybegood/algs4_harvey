@@ -1,5 +1,6 @@
 package Chapter3_5_Applications;
 
+import Chapter1_3_BagsQueuesStacks.Ex35_RandomQueue;
 import edu.princeton.cs.algs4.LinearProbingHashST;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
@@ -12,10 +13,10 @@ import edu.princeton.cs.algs4.StdRandom;
 * */
 public class Ex29_STWithRandomAccess<Key, Value> {
     private LinearProbingHashST<Key, Value> st;
-    private RandomQueue<Key> randomQueue;
+    private Ex35_RandomQueue<Key> randomQueue;
     public Ex29_STWithRandomAccess(){
         st = new LinearProbingHashST<>();
-        randomQueue = new RandomQueue<>();
+        randomQueue = new Ex35_RandomQueue<>();
     }
     public boolean isEmpty(){return st.isEmpty();}
     public boolean contains(Key key){
