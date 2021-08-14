@@ -104,11 +104,11 @@ public class Ex05_RedBlackBSTWithPrimitiveTypes {
             else {
                 node.value = value;
             }
-            if (isRed(node.left) && isRed(node.left.left)){
-                node.left = rotateToRight(node);
-            }
             if (!isRed(node.left) && isRed(node.right)){
-                node.right = rotateToRight(node);
+                node = rotateToLeft(node);
+            }
+            if (isRed(node.left) && isRed(node.left.left)){
+                node = rotateToRight(node);
             }
             if (isRed(node.left) && isRed(node.right)){
                 flipColor(node);
@@ -348,11 +348,11 @@ public class Ex05_RedBlackBSTWithPrimitiveTypes {
             else {
                 node.value = value;
             }
-            if (isRed(node.left) && isRed(node.left.left)){
-                node.left = rotateToRight(node);
-            }
             if (!isRed(node.left) && isRed(node.right)){
-                node.right = rotateToRight(node);
+                node = rotateToLeft(node);
+            }
+            if (isRed(node.left) && isRed(node.left.left)){
+                node = rotateToRight(node);
             }
             if (isRed(node.left) && isRed(node.right)){
                 flipColor(node);
