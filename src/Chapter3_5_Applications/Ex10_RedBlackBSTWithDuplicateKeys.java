@@ -10,7 +10,7 @@ import edu.princeton.cs.algs4.StdOut;
 *
 * */
 @SuppressWarnings("unchecked")
-public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Value> {
+public class Ex10_RedBlackBSTWithDuplicateKeys<Key extends Comparable<Key>, Value> {
     private final static boolean RED = true;
     private final static boolean BLACK = false;
     private class Node{
@@ -317,25 +317,48 @@ public class Ex10_RedBlackBSTWithDuplicatekeys<Key extends Comparable<Key>, Valu
     }
 
     public static void main(String[] args) {
-        Ex10_RedBlackBSTWithDuplicatekeys<String, Integer> redBlackBSTWithDuplicatekeys = new Ex10_RedBlackBSTWithDuplicatekeys<>();
-        redBlackBSTWithDuplicatekeys.put("R", 15);
-        redBlackBSTWithDuplicatekeys.put("E", 5);
-        redBlackBSTWithDuplicatekeys.put("E", 6);
-        redBlackBSTWithDuplicatekeys.put("S", 25);
-        redBlackBSTWithDuplicatekeys.put("A", 2);
-        redBlackBSTWithDuplicatekeys.put("H", 9);
-        redBlackBSTWithDuplicatekeys.put("G", 8);
-        redBlackBSTWithDuplicatekeys.put("M", 12);
+        Ex10_RedBlackBSTWithDuplicateKeys<String, Integer> redBlackBSTWithDuplicateKeys = new Ex10_RedBlackBSTWithDuplicateKeys<>();
+        redBlackBSTWithDuplicateKeys.put("R", 15);
+        redBlackBSTWithDuplicateKeys.put("E", 5);
+        redBlackBSTWithDuplicateKeys.put("E", 6);
+        redBlackBSTWithDuplicateKeys.put("S", 25);
+        redBlackBSTWithDuplicateKeys.put("A", 2);
+        redBlackBSTWithDuplicateKeys.put("H", 9);
+        redBlackBSTWithDuplicateKeys.put("G", 8);
+        redBlackBSTWithDuplicateKeys.put("M", 12);
         StdOut.println("All keys in Red Black BST");
-        StdOut.println("The size in symbol table " + redBlackBSTWithDuplicatekeys.size() + " expected 8");
-        for (String s : redBlackBSTWithDuplicatekeys.keys()){
-            StdOut.println(s + "  " + redBlackBSTWithDuplicatekeys.get(s));
+        StdOut.println("The size in symbol table " + redBlackBSTWithDuplicateKeys.size() + " expected 8");
+        for (String s : redBlackBSTWithDuplicateKeys.keys()){
+            StdOut.println(s + "  " + redBlackBSTWithDuplicateKeys.get(s));
         }
         StdOut.println("All keys in Red Black BST after deleting duplicate key E");
-        redBlackBSTWithDuplicatekeys.delete("E");
-        for (String s : redBlackBSTWithDuplicatekeys.keys()){
-            StdOut.println(s + "  " + redBlackBSTWithDuplicatekeys.get(s));
+        redBlackBSTWithDuplicateKeys.delete("E");
+        for (String s : redBlackBSTWithDuplicateKeys.keys()){
+            StdOut.println(s + "  " + redBlackBSTWithDuplicateKeys.get(s));
         }
-        StdOut.println("The size after deleting duplicate keys " + redBlackBSTWithDuplicatekeys.size() + " expected 6");
+        StdOut.println("The size after deleting duplicate keys " + redBlackBSTWithDuplicateKeys.size() + " expected 6");
     }
 }
+
+/*
+*       All keys in Red Black BST
+        The size in symbol table 8 expected 8
+        A  2
+        E  6 5
+        E  6 5 
+        G  8
+        H  9
+        M  12
+        R  15
+        S  25
+        All keys in Red Black BST after deleting duplicate key E
+        A  2
+        G  8
+        H  9
+        M  12
+        R  15
+        S  25
+        The size after deleting duplicate keys 6 expected 6
+
+*
+* */
